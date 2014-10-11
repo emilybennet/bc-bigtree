@@ -1,0 +1,159 @@
+.content-page {
+  article, section.the-meat {
+    width: 700px;
+  }
+}
+
+
+header.section-heading {
+  margin-bottom: 50px;
+  height: 20px;
+  border-bottom: 1px solid $bcGrey;
+  border-top: none;
+  h3 {
+    top: 20px;
+  }
+}
+
+ul, ol {
+  padding: 0 $list-side-padding;
+}
+
+.quad-card {
+  display: inline-block;
+  margin-bottom: 4px;
+  width: 48.999999%;
+}
+
+
+
+/*-------------------------------------------
+  Header .primary
+-------------------------------------------*/
+
+header.primary {
+  .nav-slider-control {
+    span.short {
+      display: none;
+    }
+    span.full {
+      display: inline-block;
+    }
+  }
+
+}
+
+
+
+/*-------------------------------------------
+  Homepage Guests
+-------------------------------------------*/
+
+section.guests {
+  padding: 20px 0 70px;
+  li {
+    display: inline-block;
+    @include transition(top .2s);
+    &:hover {
+      top: -5px;
+    }
+  }
+}
+
+
+/*-------------------------------------------
+  Register
+-------------------------------------------*/
+
+.other-badges {
+  .alt-badge-card {
+    display: inline-block;
+    margin: 2px 0;
+    width: 40%;
+  }
+}
+
+/*-------------------------------------------
+  Partners Section (section.partners)
+-------------------------------------------*/
+
+section.partners {
+  
+  .partner-list {
+    width: 60%;
+    float: right;
+  }
+
+  a {
+    width: 150px;
+    height: 75px;
+    @include background-size('150px 75px');
+  }
+
+  li {
+    display: inline-block;
+  }
+}
+
+
+/*-------------------------------------------
+  Footer (footer.primary)
+-------------------------------------------*/
+
+footer.primary {
+
+  .footer-liner {
+    width: 60%;
+    float: right;
+  }
+
+  .awesome-mascot {
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    width: 350px;
+  }
+}
+
+
+
+/*-------------------------------------------
+  Hotels
+-------------------------------------------*/
+
+li.hotel {
+  .details {
+    float: left;
+    width: 450px;
+  }
+  .book-it {
+    float: left;
+    margin-top: 0;
+    text-align: center;
+  }
+}
+
+/*-------------------------------------------
+  Guests
+-------------------------------------------*/
+
+.guest-filmstrips {
+
+  .filmstrip {
+    width: 33%;
+  }
+}
+
+
+// events
+// i'm soooo sorry future emily.
+
+.content.bronypalooza {
+  .timeline-group {
+    display: inline-block;
+    width: 49%;
+  }
+  .timeline.friday {
+    text-align: right;
+  }
+}

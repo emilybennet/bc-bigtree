@@ -1,0 +1,183 @@
+// scss variables
+
+@include font-face('museo-slab', font-files(
+  'museo-slab-500.woff', woff,
+  'museo-slab-500.ttf', truetype),
+  'museo-slab-500.eot', 500, normal);
+
+@include font-face('museo-slab', font-files(
+  'museo-slab-700.woff', woff,
+  'museo-slab-700.ttf', truetype),
+  'museo-slab-700.eot', 700, normal);
+
+@include font-face('proxima-nova', font-files(
+  'proxima-nova-regular.woff', woff,
+  'proxima-nova-regular.ttf', truetype),
+  'proxima-nova-regular.eot', regular, normal);
+
+@include font-face('proxima-nova', font-files(
+  'proxima-nova-italic.woff', woff,
+  'proxima-nova-italic.ttf', truetype),
+  'proxima-nova-italic.eot', regular, italic);
+
+@include font-face('proxima-nova', font-files(
+  'proxima-nova-bold.woff', woff,
+  'proxima-nova-bold.ttf', truetype),
+  'proxima-nova-bold.eot', bold, normal);
+
+@include font-face('proxima-nova', font-files(
+  'proxima-nova-bold-italic.woff', woff,
+  'proxima-nova-bold-italic.ttf', truetype),
+  'proxima-nova-bold-italic.eot', bold, italic);
+
+@include font-face('proxima-nova-condensed', font-files(
+  'proxima-nova-condensed-semibold.woff', woff,
+  'proxima-nova-condensed-semibold.ttf', truetype),
+  'proxima-nova-condensed-semibold.eot', 600, normal);
+
+
+
+
+
+// The colors Duke! The Colors!
+// ----------------------------
+ 
+$bcDarkBlue:  rgb(0,33,82);
+$bcCyan:      rgb(123,207,244);
+$bcPurple:    rgb(87,51,141);
+$bcPink:      rgb(159,36,136);
+$bcOrange:    rgb(248,138,50);
+$bcGrey:      rgb(165,165,165);
+
+$bcGreen:      rgb(135,200,140);
+
+$black:       rgb(34,34,34);
+// $white:       rgb(239,239,239);
+$white:       rgb(250,250,250);
+$pureWhite:   rgb(255,255,255);
+
+
+$superLightGrey: rgb(240,240,240);
+$lightGrey:   rgb(211,211,211);
+$darkGrey:    rgb(64,64,64);
+$darkestGrey: rgb(15,15,15);
+
+
+
+
+// Typography
+// -------------------------
+
+$museoSlab: "museo-slab", georgia, serif;
+$proximaCon: "proxima-nova-condensed", impact, sans-serif;
+$proxima: "proxima-nova", "helvetica neue", helveticaneue, helvetica, sans-serif;
+
+$font-size-base: 17px !default;
+$font-size-large: ceil($font-size-base * 1.25) !default; // ~22px
+$font-size-small: ceil($font-size-base * 0.85) !default; // ~15px
+$font-size-extra-small: ceil($font-size-base * 0.75) !default; // ~13px
+
+$button-font-size: ceil($font-size-base * 0.85) !default; // ~15px
+$button-font-size-large: $font-size-base !default; // ~17px
+$button-font-size-small: ceil($font-size-base * 0.65) !default; // ~12px
+
+$font-size-h1: floor($font-size-base * 4.12) !default; // ~70px
+$font-size-h2: floor($font-size-base * 2.36) !default; // ~40px
+$font-size-h3: ceil($font-size-base * 2.00) !default; // ~34px
+$font-size-h4: ceil($font-size-base * 1.64) !default; // ~28px
+$font-size-h5: ceil($font-size-base * 1.41) !default; // ~24px
+$font-size-h6: $font-size-base !default; // ~17px
+$font-size-h7: ceil($font-size-base * 0.85) !default; // ~15px
+
+$headings-line-height: 1.1 !default;
+$headings-weight-default: 500 !default;
+$line-height-base: 1.4em !default;
+$font-weight-default: 400 !default;
+
+$list-margin: ($line-height-base/2) !default;
+$list-side-padding-xs: ($line-height-base*1.5) !default;
+$list-side-padding: ($line-height-base*3) !default;
+
+$headline-color: $bcPurple;
+$blockquote-accent-color: $bcPurple;
+
+$font-size-xs: ceil($font-size-base * 0.65) !default; // ~12px
+
+
+
+// Style Breakpoints
+// -------------------------
+
+// Extra small screen / phone
+$screen-xs-min: 480px !default;
+$screen-phone: $screen-xs-min !default;
+
+// Small screen / tablet
+$screen-sm-min: 768px !default;
+$screen-tablet: $screen-sm-min !default;
+
+// Medium screen / desktop
+$screen-md-min: 992px !default;
+$screen-desktop: $screen-md-min !default;
+
+// Large screen / wide desktop
+$screen-lg-min: 1200px !default;
+$screen-lg-desktop: $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max: ($screen-sm-min - 1) !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+$screen-md-max: ($screen-lg-min - 1) !default;
+
+
+
+// all things button & component
+// -----------------------------
+
+$text-color: $black !default;
+$border-radius-base: 0px !default;
+
+$padding-base-vertical: 6px !default;
+$padding-base-horizontal: 12px !default;
+
+$padding-large-vertical: 10px !default;
+$padding-large-horizontal: 16px !default;
+
+$padding-small-vertical: 5px !default;
+$padding-small-horizontal: 10px !default;
+
+$line-height-large: 1.33 !default;
+$line-height-small: 1.5 !default;
+$line-height-computed: floor($font-size-base * ($line-height-base/1em)) !default; // ~20px
+
+$border-radius-base: 4px !default;
+$border-radius-large: 6px !default;
+$border-radius-small: 3px !default;
+
+
+
+// forms
+// -----------------------------
+
+$form-field-label-size: $font-size-small;
+$form-field-font-size: 14px;
+$form-field-padding: 10px 12px;
+$form-field-border-radius: 2px;
+
+$form-field-font-size-small: 12px;
+$form-field-padding-small: 8px 8px;
+
+$form-field-font-size-large: $font-size-h5;
+$form-field-padding-large: 12px 18px;
+
+$form-field-color: $black;
+$form-field-background-color: white;
+$form-field-border-color: #c7c7c7;
+$form-field-border-color-hover: #9E9E9E;
+$form-field-border-color-focus: $bcPurple;
+$form-error-color: #DD4B39;
+$form-field-group-addon-background: #EEEEEE;
+$form-field-group-addon-border-color: $form-field-border-color;
+
+$form-placeholder-color: rgba(166, 166, 166, 0.6);
+$form-plceholder-color-focus: rgba(204, 204, 204, 0.6);

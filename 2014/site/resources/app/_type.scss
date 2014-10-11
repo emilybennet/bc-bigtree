@@ -1,0 +1,315 @@
+//
+// Typography Foundation
+// --------------------------------------------------
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0 0 ($line-height-base/2);
+}
+
+.glyphicon-font {
+  font-family: 'Glyphicons Regular';
+}
+
+.close-tooltip {
+  font-size: 20px !important;
+  font-weight: bold;
+  position: absolute;
+  right: 5px;
+  top: 3px;
+  z-index: 10;
+  color: $bcOrange;
+  cursor: pointer;
+}
+
+
+
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $museoSlab;
+  font-weight: $headings-weight-default;
+  line-height: $headings-line-height;
+  small {
+    font-size: 65%;
+  }
+}
+
+
+h1, h2, h3 {
+  margin-top: $line-height-base;
+  margin-bottom: ($line-height-base/2);
+}
+
+h4, h5, h6 {
+  margin-top: ($line-height-base/2);
+  margin-bottom: ($line-height-base/2);
+}
+
+h1, .h1 { font-size: $font-size-h1; }
+h2, .h2 { font-size: $font-size-h2; }
+h3, .h3 { font-size: $font-size-h3; }
+h4, .h4 { font-size: $font-size-h4; }
+h5, .h5 { font-size: $font-size-h5; }
+h6, .h6 { font-size: $font-size-h6; }
+
+
+
+// Emphasis & misc
+// -------------------------
+
+abbr {
+  border-bottom: none;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+small {
+  font-size: 75%;
+}
+
+
+
+// (Un)ordered lists
+// -------------------------
+
+ul {
+  li:before {
+    position: absolute;
+    left: -20px;
+    display: inline-block;
+    content: "\25D1";
+    font-size: 70%;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ul, ol {
+  margin: 0 0 $list-margin;
+  padding: 0 $list-side-padding-xs;
+
+  li {
+    margin-top: $list-margin;
+  }
+
+  li>:first-child, li ul:first-of-type {
+    margin-top: 0;
+  }
+
+  ul, ol {
+    margin-bottom: 0;
+  }
+
+  &.unstyled, nav & {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin-top: 0;
+      &:before {
+      content: "";
+      display: none;
+    }
+    }
+  }
+
+}
+
+
+
+// Blockquotes!
+// -------------------------
+
+blockquote {
+  padding: ($line-height-base/ 2) $line-height-base;
+  margin: 0 0 $line-height-base;
+  border-left: 5px solid $blockquote-accent-color;
+  p {
+    font-size: ($font-size-base * 1.25);
+    font-weight: 300;
+    line-height: 1.25;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+  small {
+    display: block;
+    line-height: $line-height-base;
+    color: $blockquote-accent-color;
+    &:before {
+      content: '\2014 \00A0';// EM DASH, NBSP
+    }
+  }
+}
+
+
+// Alerts, yo!
+// -------------------------
+
+.alert {
+  display: block;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  font-size: 80%;
+  line-height: 1.3em;
+
+  &.info {
+    color: #3a87ad;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+  }
+
+  &.success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+  }
+
+  &.warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+  }
+
+  &.danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+  }
+}
+
+
+
+
+// And some specifics
+// -------------------------
+
+
+header.section-heading {
+  margin: 40px 0 30px;
+  padding: 20px;
+  display: block;
+  text-align: center;
+  border-top: 1px solid $bcGrey;
+  overflow: visible;
+
+  h3 {
+    display: inline-block;
+    padding: 0 20px;
+    margin: 0 0 -20px;
+    background: $white;
+    font-family: $museoSlab;
+    color: $bcGrey;
+  }
+}
+
+.breadcrumb {
+  display: block;
+  margin-bottom: 20px;
+  font-size: $font-size-small;
+}
+
+
+.content-page {
+
+  .page-header {
+    font-family: $museoSlab;
+    color: $bcPurple;
+    h2 {
+      margin-top: 0;
+    }
+  }
+
+  article, section.the-meat {
+    margin: 0 auto;
+    max-width: 700px;
+    a {
+      color: $bcPink;
+      @include transition(all .2s);
+      &:hover {
+        color: $bcOrange;
+      }
+    }
+  }
+
+  &.wide-load {
+    article, section.the-meat {
+      max-width: inherit;
+      width: 100%;
+    }
+  }
+
+  &.narrow-load {
+    article, section.the-meat {
+      max-width: 750px;
+      width: 100%;
+    }
+  }
+
+
+
+  h2 {
+    color: $bcPurple;
+  }
+
+  h3 {
+    color: $bcCyan;
+  }
+
+}
+
+
+.press-releases {
+
+  .dateline {
+    margin-bottom: 30px;
+    color: $bcPurple;
+    .glyphicon-font {
+      font-size: 70%;
+    }
+  }
+
+  .press-release-auxillary {
+    font-size: 80%;
+    line-height: 1.3em;
+    margin-top: 60px;
+
+    h6 {
+      color: $bcPurple;
+    }
+  }
+
+  .release-list {
+    h4 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    .dateline {
+      margin-bottom: 15px;
+    }
+    article {
+      margin-bottom: 20px;
+      border-bottom: 1px solid $lightGrey;
+    }
+  }
+
+
+}
+
+

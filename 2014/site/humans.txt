@@ -1,0 +1,54 @@
+
+__          __                      _                                     _ 
+\ \        / /                     | |                                   | |
+ \ \  /\  / /___    __ _ _ __ ___  | |__  _   _ _ __ ___   __ _ _ __  ___| |
+  \ \/  \/ // _ \  / _` | '__/ _ \ | '_ \| | | | '_ ` _ \ / _` | '_ \/ __| |
+   \  /\  /|  __/ | (_| | | |  __/ | | | | |_| | | | | | | (_| | | | \__ \_|
+    \/  \/  \___|  \__,_|_|  \___| |_| |_|\__,_|_| |_| |_|\__,_|_| |_|___(_)
+
+
+
+/*   W E B   T E A M   */
+
+Emily Bennet (UX, IA, Dev)        twitter.com/emilybennet
+John Feulner (SysAdmin)           twitter.com/jfeulner
+
+
+
+/*   P U B L I C   R E L A T I O N S   */
+
+Joshua "ShutterSpeed" Brems       twitter.com/1863photog
+Tim "StarlightIronhoof" Star      twitter.com/pegastarlight
+
+
+
+/*   A R T W O R K   */
+
+Brianna "Dream" Little            lustrous-dreams.deviantart.com/
+Gábor "Atryl" Pataki              atryl.deviantart.com/
+Lauren Herda                      twitter.com/lrenhrda
+Mike "Masem" Neylon               masemj.deviantart.com/
+Molly "Balloons" Doering          balloons504.deviantart.com/
+Monica "Holly" Grover             hollulu.deviantart.com/
+Ryan Goodman                      thetidbit.deviantart.com/
+Samantha "Centchi" Stroh          centchi.deviantart.com/
+Steve "Shou" Chen                 dshou.deviantart.com/
+Timothy "Tympany" Fay             tim-kangaroo.deviantart.com/
+Trish Forstner                    nanook123.deviantart.com/
+William "Fallfeathers" Marks      fallfeatherspony.tumblr.com/
+
+
+
+/*   M A N A G E M E N T   */
+
+Eli "Rabbi" Morris-Heft           twitter.com/dispatchrabbi
+Josh "imjoshdean" Dean            twitter.com/imjoshdean
+
+
+
+/*   S I T E   */
+
+Manufacture Date: 2013/11.4
+Language: English
+Standards: HTML5, CSS3 (SCSS powered)
+CMS: BigTree 4.0

@@ -1,0 +1,165 @@
+.wrap {
+  padding: 0;
+  text-align: center;
+  margin: 0 auto;
+  width: 960px;
+}
+
+
+/*-------------------------------------------
+  Header .primary
+-------------------------------------------*/
+
+header.primary {
+  padding-top: 10px;
+
+  .brand {
+    float: left;
+  }
+}
+
+nav.primary {
+  position: absolute;
+  top: 0;
+  padding-top: 10px;
+  width: 100%;
+  text-align: right;
+
+  a {
+    padding: 10px 10px 8px 10px;
+  }
+}
+
+
+.blue-band {
+  padding: 30px 0 50px;
+}
+
+
+
+/*-------------------------------------------
+  Homepage Guests
+-------------------------------------------*/
+
+section.guests {
+  li {
+    margin: 0 10px 0 10px;
+  }
+}
+
+
+.content-page {
+
+  nav.section-nav {
+    float: left;
+    width: 200px;
+    padding-top: 60px;
+    font-family: $proximaCon;
+    font-size: 17px;
+
+    a {
+      display: block;
+      padding: 10px 10px 8px 10px;
+      color: $bcGrey;
+      @include transition(all .2s);
+      &.sub-current span:after {
+        display: inline-block;
+        margin-left: 10px;
+        content: '\25BE';
+      }
+      &.external span:after {
+        position: absolute;
+        font-size: 80%;
+        margin-left: 5px;
+        font-family: 'Glyphicons Regular';
+        content: '\E390';
+      }
+    }
+
+    li {
+      margin-bottom: 2px;
+      background-color: #efefef;
+      &:hover a {
+        color: $bcPurple;
+      }
+      &.sub-current, &.active {
+        background-color: $bcPurple;
+        > a {
+          color: $white;
+        }
+        .sub-nav li {
+          background-color: transparent;
+          border-top: 1px solid #785AA2;
+          margin-bottom: 0;
+          a {
+            padding-left: 20px;
+            color: rgba($white, .3);
+            &:hover {
+              color: $white;
+            }
+          }
+            &.first, &.active {
+              border-top: none;
+            }
+          &.active {
+            background-color: rgba($white, .2);
+            a {
+              color: $white;
+              border-color: $white;
+            }
+          }
+        }
+      }
+    }
+
+    .sub-current .sub-nav {
+      padding: 0 5px 5px 5px;
+    }
+
+  }
+
+  article, section.the-meat {
+    padding: 0px 10px 10px 10px;
+
+    header.page-header {
+      position: relative;
+      top: -40px;
+      left: -20px;
+      h2 {
+        display: inline-block;
+        background: $white;
+        margin: 0px;
+        padding: 10px 20px;
+      }
+    }    
+  }
+
+  &.has-nav {
+    article, section.the-meat {
+      float: right;
+    }
+  }
+  
+}
+
+
+/*-------------------------------------------
+  Registration
+-------------------------------------------*/
+
+
+
+// .badge-types {
+
+//   header, li {
+//     section {
+//       &.key {
+//         width: 300px;
+//       }
+//       &.badge {
+//         width: 100px;
+//         text-align: center;
+//       }
+//     }
+//   }
+// }

@@ -1,0 +1,31 @@
+//
+// Home layout specifics
+// --------------------------------------------------
+
+
+/*-------------------------------------------
+  Blue Band (.blue-band)
+  Used for Dateline (.dateline)
+-------------------------------------------*/
+
+.blue-band {
+  width: 100%;
+  background: $bcDarkBlue;
+  text-align: center;
+  color: $bcCyan;
+  font-size: 20px;
+  padding: 30px 0;
+}
+
+.dateline {
+  h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  p {
+    font-style: italic;
+    opacity: .5;
+    max-width: 500px;
+    margin: 20px auto;
+  }
+}

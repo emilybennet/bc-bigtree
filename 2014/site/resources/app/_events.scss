@@ -1,0 +1,126 @@
+.bp-background {
+  background: image-url("bronypalooza-texture-2x.jpg") rgb(236, 77, 155) scroll no-repeat;
+  background-size: cover;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+}
+
+.content.bronypalooza {
+  background: transparent;
+  color: white;
+  min-height: 500px;
+  padding-top: 120px;
+
+
+  .bp-logo {
+    display: none;
+    background: image-url("bronypalooza-logo-concept.png") transparent no-repeat scroll 50% 0;
+    background-size: 250px 250px;
+    height: 250px;
+    text-align: center;
+    h2 {
+      text-indent: -9000px;
+    }
+  }
+
+  h2, h3 {
+    color: white;
+  }
+
+  h3.tagline {
+    text-align: center;
+  }
+
+
+  .timeline-group {
+    margin: 20px 0;
+  }
+
+  .timeline {
+    // border-left: 2px dotted white;
+    li {
+      // &:before {
+      //   display: inline-block;
+      //   content: "\2B24";
+      //   font-size: 12px;
+      //   left: -8px;
+      //   position: absolute;
+      //   top: -4px;
+      // }
+      div {
+        padding: 0 20px 20px;
+        
+      }
+      h4 {
+        color: white;
+        font-size: 20px;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+    // &:after {
+    //   display: inline-block;
+    //   content: "\25B2";
+    //   font-size: 24px;
+    //   left: -8px;
+    //   position: absolute;
+    //   bottom: -8px;
+    // }
+    &.line-right {
+      border-left: none;
+      border-right: 2px dotted white;
+      li {
+        &:before {
+          left: auto;
+          right: -8px;
+        }
+        div {
+          text-align: right;
+        }
+      }
+    }    
+  }
+}
+
+
+.events-schedule {
+  h4 {
+    margin-top: 0;
+    margin-bottom: 0.3em;
+  }
+  ul.events {
+    li {
+      display: inline-block;
+      background: white;
+      border: 1px solid $lightGrey;
+      cursor: pointer;
+      overflow: hidden;
+      margin: 0 5px 5px 0;
+      padding: 5px 5px 4px 45px;
+      @include border-radius(3px);
+      span {
+        display: inline-block;
+      }
+      .location {
+        color: white;
+        font-size: 11px;
+        font-weight: bold;
+        background: $lightGrey;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 40px;
+        text-align: center;
+      }
+      .event-name {
+        // font-weight: bold;
+      }
+    }
+  }
+  .time-block {
+    margin-bottom: 20px;
+  }
+}

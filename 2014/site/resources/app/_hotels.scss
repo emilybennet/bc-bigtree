@@ -1,0 +1,117 @@
+
+// Hotel list
+// -------------------------
+
+
+li.hotel {
+  margin-bottom: 30px;
+  width: 100%;
+  background: $pureWhite;
+  border: 1px solid rgb(239,239,239);
+
+  h5 {
+    margin: 0;
+    padding: 10px 20px;
+    width: 100%;
+    color: $white;
+    background: $bcPurple;
+    @include box-sizing('border-box');
+    small {
+      display: block;
+      font-size: 50%;
+      -webkit-font-smoothing: subpixel-antialiased;
+    }
+  }
+
+  .card-liner {
+    padding: 20px;
+  }
+  .details {
+    font-size: $font-size-small;
+    address {
+      display: block;
+    }
+    .contact-info {
+      margin-bottom: 20px;
+    }
+  }
+
+  .book-it {
+    margin-top: 20px;
+    padding-top: 10px;
+    width: 200px;
+    color: $bcPurple;
+    .price-tag {
+      display: inline-block;
+      margin-bottom: 10px;
+      font-size: $font-size-h3;
+    }
+    .price {
+      font-family: $museoSlab;
+    }
+    .per {
+      margin-left: -5px;
+      font-size: 40%;
+    }
+    .discount-code {
+      display: block;
+      margin-top: 5px;
+      font-size: 40%;
+    }
+    .promo-expired-msg {
+      display: block;
+      margin-top: 5px;
+      font-size: 13px;
+      line-height: 1.1;
+      color: $bcGrey;
+      a {
+        color: $bcOrange;
+      }
+    }
+  }
+
+  &.official-hotel {
+    h5 {
+      background: $bcOrange;
+    }
+    .book-it {
+      color: $bcOrange;
+    }
+  }
+
+  &.sold-out {
+    h5 {
+      background: $bcGrey;
+    }
+  }
+
+}
+
+.billboard .leaflet-popup-content {
+  margin: 10px;
+  width: 170px;
+  font-family: $proxima;
+  line-height: $line-height-base;
+  .marker-title {
+    line-height: 1.2em;
+  }
+  header {
+    font-weight: bold;
+    line-height: 1.2em;
+  }
+  .book-it {
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+  }
+  .btn-sm {
+    display: inline-block;
+    margin: 0 2px;
+    width: 40%;
+    padding: 3px;
+    font-size: 12px;
+  }
+  span.promo-code {
+    display: block;
+  }
+}

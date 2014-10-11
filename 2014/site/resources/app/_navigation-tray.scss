@@ -1,0 +1,57 @@
+//
+// Navigation Tray Slider
+// --------------------------------------------------
+
+.nav-slider-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 270px;
+  height: 100%;
+  padding: 10px;
+  padding-right: 0px;
+  overflow: hidden;
+  overflow-y: auto;
+  background: $black;
+  @include box-sizing('border-box');
+
+  a {
+    display: block;
+    padding: 10px 15px;
+    color: $darkGrey;
+    @include transition(all .2s);
+    @include box-sizing('border-box');
+    &:hover {
+      color: $bcCyan;
+    }
+  }
+
+  li {
+    font-family: $proxima;
+    font-size: 18px;
+  }
+
+  .sub-nav {
+    display: none;
+    padding-left: 40px;
+    margin-bottom: 30px;
+    .sub-nav {
+      margin-bottom: 0px;
+    }
+    a {
+      padding: 10px 20px;      
+      &:before {
+        position: absolute;
+        left: 0;
+        content: '\2013';
+      }
+    }
+    li {
+      border-left: 1px solid $darkGrey;
+      font-family: $proxima;
+      font-size: 18px;
+      text-transform: none;
+    }
+  }
+
+}

@@ -1,0 +1,97 @@
+// The Mix Ins
+// --------------------------------------------------------------
+
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+
+@mixin background-size(
+  $size-1: $default-background-size,
+  $size-2: false,
+  $size-3: false,
+  $size-4: false,
+  $size-5: false,
+  $size-6: false,
+  $size-7: false,
+  $size-8: false,
+  $size-9: false,
+  $size-10: false
+) {
+  $size-1: if(type-of($size-1) == string, unquote($size-1), $size-1);
+  $sizes: compact($size-1, $size-2, $size-3, $size-4, $size-5, $size-6, $size-7, $size-8, $size-9, $size-10);
+  @include experimental(background-size, $sizes, -moz, -webkit, -o, not -ms, not -khtml);
+   -ms-behavior: url(/js/backgroundsize.min.htc);
+}
+
+
+
+// Hide/Show Responsiveness
+//   thx getbootstrap.com!
+// -------------------------
+
+@mixin responsive-visibility($parent) {
+  #{$parent} {
+    display: block !important;
+  }
+  tr#{$parent} { display: table-row !important; }
+  th#{$parent},
+  td#{$parent} { display: table-cell !important; }
+}
+
+@mixin responsive-invisibility($parent) {
+  #{$parent} {
+    display: none !important;
+  }
+  tr#{$parent} { display: none !important; }
+  th#{$parent},
+  td#{$parent} { display: none !important; }
+}
+
+
+
+// button-variant
+//   pump out those buttons!
+// -------------------------
+@mixin button-variant($rest, $hover, $active: $hover) {
+  color: $rest !important;
+  border-color: $rest;
+  &:hover, &:focus {
+    color: $hover !important;
+    border-color: $hover;
+  }
+  &:active {
+    color: $active !important;
+    border-color: $active;
+  }
+}
+
+@mixin button-fill-variant($rest, $hover, $text: false, $active: $hover) {
+  @if $text != false {
+      color: $text !important;
+    } @else {
+      color: $white !important;
+    }
+  background-color: $rest;
+  border-color: $rest;
+  &:hover, &:focus {
+    background-color: $hover !important;
+    border-color: $hover;
+  }
+  &:active {
+    background-color: $active !important;
+    border-color: $active;
+  }
+}
+
+
+
+// Button sizes
+// -------------------------
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius: 0) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  line-height: $line-height;
+  border-radius: $border-radius;
+}

@@ -1,0 +1,106 @@
+//
+// Site Footer
+// --------------------------------------------------
+
+
+/*-------------------------------------------
+  Partners Section (section.partners)
+-------------------------------------------*/
+
+section.partners {
+  padding: 30px 0;
+  background: $bcPurple;
+  text-align: center;
+  @include box-sizing('border-box');
+
+  a {
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    @include background-size('100px 50px');
+    text-indent: -99999px;
+    opacity: .7;
+    @include transition(opacity .2s);
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+
+
+
+/*-------------------------------------------
+  Footer (footer.primary)
+-------------------------------------------*/
+
+
+footer.primary {
+  background: #222;
+
+  .wrap {
+    padding: 50px 0 10px;
+  }
+
+  .upsidefun {
+    top: -50px;
+    @include transform(rotate(180deg));
+  }
+
+  a {
+    color: $darkGrey;
+    @include transition(all .2s);
+    &:hover {
+      color: $bcGrey;
+    }
+  }
+
+  nav.site {
+    margin: 0 auto 50px auto;
+    width: 300px;
+    font-size: $font-size-h6;
+
+    li {
+      margin: 0 10px;
+      display: inline-block;
+    }
+
+    a {
+      color: $bcPurple;
+      font-style: normal;
+      &:hover {
+        color: $bcPink;
+      }
+    }
+  }
+
+  nav.social {
+    li {
+      display: inline-block;
+      margin: 0 5px;
+      font-size: $font-size-h4;
+    }
+    span {
+      display: none;
+    }
+  }
+
+  .baltimore-rocks {
+    .accent {
+      color: $bcPink;
+      font-style: normal;
+    }
+  }
+
+  .lawyer-speak {
+    margin: 50px auto;
+    width: 300px;
+    color: $darkGrey;
+    font-size: $font-size-xs;
+    line-height: $headings-line-height;
+  }
+
+  .awesome-mascot {
+    display: none;
+  }
+}

@@ -1,0 +1,150 @@
+/*-------------------------------------------
+  Guest info
+-------------------------------------------*/
+
+section.guests {
+  margin: 0 auto;
+  max-width: 960px;
+  text-align: center;
+
+  .section-heading {
+    margin-top: 0px;
+  }
+
+  .image-group {
+    img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -88px;
+      width: 175px;
+      height: auto;
+      @include border-radius(88px);
+      @include transition(opacity .2s);
+      &.front {
+        z-index: 2;
+      }
+      &.back {
+        z-index: 1;
+      }
+    }
+  }
+
+  ul.guests {
+    display: inline-block;
+  }
+
+  li {
+    padding: 20px;
+    height: 230px;
+    width: 174px;
+    cursor: pointer;
+    vertical-align: top;
+
+  a {
+    color: $bcDarkBlue;
+  }
+
+    h3 {
+      top: 170px;
+      font-family: $museoSlab;
+      font-size: 20px;
+      color: $bcDarkBlue;
+      small {
+        display: block;
+        font-size: 15px;
+        font-style: italic;
+        color: $bcGrey;
+      }
+    }
+    &:hover {
+      img.front {
+        opacity: 0;
+      }
+    }
+  }
+
+  &.single-guest {
+    text-align: left;
+    padding-bottom: 50px;
+
+    .image-group {
+      display: none;
+      float: left;
+      z-index: 2;
+      width: 175px;
+      img {
+        @include border-radius(0px);
+      }
+      &:hover {
+        img.front {
+          opacity: 0;
+        }
+      }
+    }
+
+    .guest-bio {
+      position: relative;
+      z-index: 1;
+      h3 {
+        margin-top: 0px;
+      }
+    }
+
+  }
+}
+
+.guest-filmstrips {
+
+  .filmstrip {
+    padding: 5px;
+    @include box-sizing('border-box');
+  }
+
+  .guest-card {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid $lightGrey;
+    @include transition(all .2s);
+
+    .heading-group {
+      h3 {
+        margin-top: ($line-height-base/2);
+        font-size: $font-size-h5;
+        color: $bcDarkBlue;
+        small {
+          display: block;
+          font-size: $font-size-small;
+        }
+      }
+    }
+    &:hover {
+      background: $bcCyan;
+      h3 {
+        color: $white;
+      }
+      img.front {
+        opacity: 0;
+      }
+    }
+  }
+
+  .image-group {
+    img {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: auto;
+      border: 1px solid $white;
+      @include transition(opacity .2s);
+      &.front {
+        z-index: 2;
+      }
+      &.back {
+        z-index: 1;
+      }
+    }
+  }
+
+
+}
