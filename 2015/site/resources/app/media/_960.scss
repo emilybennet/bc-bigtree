@@ -1,0 +1,39 @@
+/*-------------------------------------------
+  Billboard
+-------------------------------------------*/
+
+.billboard {
+  .slide-content {
+    bottom: auto;
+    padding: 0;
+    width: 50%;
+    background: transparent;
+    @media screen and (min-height: 800px) {
+      bottom: 300px;
+      height: 280px;
+    }
+    &.right {
+      right: 0;
+      padding-right: 30px;
+      text-align: right;
+    }
+    &.left {
+      left: 0;
+      padding-left: 30px;
+      text-align: left;
+    }
+    h1 {
+      font-size: 50px;
+    }
+    p {
+      font-size: 25px;
+    }
+  }
+  img.foreground {
+    width: 70%;
+  }
+  .reveal .slide-background {
+    @include background-size('1440px auto');
+  }
+}
+

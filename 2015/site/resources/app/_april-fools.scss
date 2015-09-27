@@ -1,0 +1,23 @@
+$dkCyan: darken($bcCyan,10%);
+
+.april-fools {
+  h1 {
+    color: $dkCyan;
+    font-size: 40px;
+    margin: 0px 0px 20px;
+  }
+  strong {
+    color: $dkCyan;
+  }
+  a {
+    color: $dkCyan;
+    display: inline-block;
+    border-bottom: 1px dotted $dkCyan;
+  }
+  .action-buttons {
+    padding-top: 20px;
+    text-align: center;
+  }
+}
+
+.btn-order-now { @include button-fill-variant($dkCyan, darken($dkCyan,20%)); }

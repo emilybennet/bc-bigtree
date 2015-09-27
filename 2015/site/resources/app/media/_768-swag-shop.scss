@@ -1,0 +1,20 @@
+.product-catalog {
+  .item {
+    margin: 0 20px 20px 0;
+    display: inline-block;
+    width: 45%;
+    &.even {
+      margin-right: 0;
+    }
+  }
+}
+
+.shop-cart {
+  .table {
+    footer {
+      .cart-disclaimer {
+        padding: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,199 @@
+/*
+ * Picker Plugin [Formstone Library]
+ * @author Ben Plum
+ * @version 0.4.0
+ *
+ * Copyright © 2013 Ben Plum <mr@benplum.com>
+ * Released under the MIT License <http://www.opensource.org/licenses/mit-license.php>
+ */
+ 
+.picker-element { 
+  left: -999999px; 
+  position: absolute;
+}
+
+.picker { 
+  cursor: pointer; 
+  margin: 0 0 10px 0; 
+  overflow: hidden;
+
+  .picker-label { 
+    color: #888; 
+    display: block; 
+    float: left; 
+    font-size: 14px; 
+    line-height: 16px; 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+
+  .picker-handle { 
+    border: 1px solid #ccc; 
+    display: block; 
+    float: left; 
+    height: 16px; 
+    margin: 0 5px 0 0; 
+    width: 16px;
+  }
+
+  &.focus {
+    .picker-label {
+      color: #555;
+    }
+
+    .picker-handle {
+      border-color: #aaa;
+    }    
+  }
+
+  // radio input
+  &.picker-radio {
+    .picker-handle {
+      border-radius: 8px;
+    }
+
+    .picker-flag {
+      background: #fff;
+      display: block;
+      border-radius: 4px;
+      height: 8px; 
+      margin: 4px;
+      width: 8px;
+    }
+
+    &.focus .picker-flag {
+      background: #ddd;
+    }
+
+    &.checked .picker-flag {
+      background: #999;
+    }
+  }
+
+  // checkbox input
+  
+  &.picker-checkbox {
+    .picker-handle {
+      border-radius: 3px;
+    }
+
+    .picker-flag { 
+      background: #fff; 
+      border-radius: 2px; 
+      display: block; 
+      height: 100%; 
+      margin: 0; 
+      width: 100%;
+    }
+
+    &.checked .picker-flag {
+      background: #fff url(fs-picker-icon.png) no-repeat center;
+    }
+  }
+
+
+  // toggle input
+  
+  &.picker-toggle {
+    padding: 20px 0 0;
+    position: relative;
+
+    .picker-toggle-label { 
+      color: #999; 
+      font-size: 12px; 
+      position: absolute; 
+      text-transform: uppercase; 
+      top: 0;
+
+      &.on { 
+        left: 0;
+      }
+      &.off { 
+        color: #333; 
+        right: 0;
+      }
+
+      .picker-label {
+        display: none;
+      }
+
+      .picker-handle {
+        border-radius: 3px; 
+        position: relative; 
+        width: 100%;
+      }
+
+      .picker-flag { 
+        background: #666; 
+        border-radius: 2px; 
+        display: block; 
+        height: 100%; 
+        left: 50%; 
+        margin: 0; 
+        position: absolute; 
+        top: 0; 
+        width: 50%; 
+        -webkit-transition: left 0.1s linear;
+        -moz-transition: left 0.1s linear;
+        -ms-transition: left 0.1s linear;
+        -o-transition: left 0.1s linear;
+        transition: left 0.1s linear;
+      }
+    }
+
+    &.checked {
+      .picker-toggle-label {
+        &.on {
+          color: #333; 
+        }
+        &.off {
+          color: #999;
+        }
+      }
+
+      .picker-flag {
+        background: #666; 
+        left: 0;
+      }
+    }
+  }
+
+  &.disabled {
+    .picker-label { 
+      color: #ccc; 
+      cursor: default;
+    } 
+    .picker-handle {
+      border-color: #eee;
+      cursor: default;
+    }
+    &.picker-radio {
+      .picker-flag {
+        background: #fff;
+      }
+      &.checked .picker-flag {
+        background: #eee;
+      }
+    }
+    &.picker-checkbox {
+      .picker-flag::after { 
+        color: #eee;
+        content: '';
+      }
+      &.checked .picker-flag::after {
+        color: #eee;
+        content: '\2714';
+      }
+    }
+  }
+}
+
+  // @media screen and (min-width: 740px) {
+  //   .picker:hover .picker-label { color: #555; }
+  //   .picker:hover .picker-handle { border-color: #aaa; }
+    
+  //   .picker.picker-radio:hover .picker-flag { background: #ddd; }
+  // }

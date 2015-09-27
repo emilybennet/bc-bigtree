@@ -1,0 +1,185 @@
+// The Mix Ins
+// --------------------------------------------------------------
+
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+
+@mixin background-size(
+  $size-1: $default-background-size,
+  $size-2: false,
+  $size-3: false,
+  $size-4: false,
+  $size-5: false,
+  $size-6: false,
+  $size-7: false,
+  $size-8: false,
+  $size-9: false,
+  $size-10: false
+) {
+  $size-1: if(type-of($size-1) == string, unquote($size-1), $size-1);
+  $sizes: compact($size-1, $size-2, $size-3, $size-4, $size-5, $size-6, $size-7, $size-8, $size-9, $size-10);
+  @include experimental(background-size, $sizes, -moz, -webkit, -o, not -ms, not -khtml);
+   -ms-behavior: url(/js/backgroundsize.min.htc);
+}
+
+
+
+// Hide/Show Responsiveness
+//   thx getbootstrap.com!
+// -------------------------
+
+@mixin responsive-visibility($parent) {
+  #{$parent} {
+    display: block !important;
+  }
+  tr#{$parent} { display: table-row !important; }
+  th#{$parent},
+  td#{$parent} { display: table-cell !important; }
+}
+
+@mixin responsive-invisibility($parent) {
+  #{$parent} {
+    display: none !important;
+  }
+  tr#{$parent} { display: none !important; }
+  th#{$parent},
+  td#{$parent} { display: none !important; }
+}
+
+
+
+// button-variant
+//   pump out those buttons!
+// -------------------------
+@mixin button-variant($rest, $hover, $active: $hover) {
+  color: $rest !important;
+  border-color: $rest;
+  &:hover, &:focus {
+    color: $hover !important;
+    border-color: $hover;
+  }
+  &:active {
+    color: $active !important;
+    border-color: $active;
+  }
+}
+
+@mixin button-fill-variant($rest, $hover, $text: false, $active: $hover) {
+  @if $text != false {
+      color: $text !important;
+    } @else {
+      color: $white !important;
+    }
+  background-color: $rest;
+  border-color: $rest;
+  &:hover, &:focus {
+    background-color: $hover !important;
+    border-color: $hover;
+  }
+  &:active {
+    background-color: $active !important;
+    border-color: $active;
+  }
+}
+
+
+
+// Button sizes
+// -------------------------
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius: 0) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  line-height: $line-height;
+  border-radius: $border-radius;
+}
+
+
+// flexbox love
+// -------------------------
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
+
+
+// // val == start | center | end | justify
+// @mixin flex-pack($val) {
+//   -moz-box-pack: #{$val};
+//   -webkit-box-pack: #{$val};
+//   -ms-flex-align: #{$val};
+//   @if ($val == "center") {
+//     align-self: #{$val};
+//   } @else {
+//     align-self: flex-#{$val};
+//   }
+// }
+
+// val == auto | flex-start | flex-end | center | baseline | stretch
+// default == auto
+@mixin align-self($value: auto) {
+  // No Webkit Box Fallback.
+  -webkit-align-self: #{$value};
+  -moz-align-self: #{$value};
+  @if $value == flex-start {
+    -ms-flex-item-align: start;
+  } @else if $value == flex-end {
+    -ms-flex-item-align: end;
+  } @else {
+    -ms-flex-item-align: #{$value};
+  }
+  align-self: #{$value};
+}
+
+// val == start | center | end | justify
+@mixin flex-align($val) {
+  -webkit-align-items: #{$val};
+  -moz-align-items: #{$val};
+  -ms-flex-align: #{$val};
+  align-items: #{$val};
+}
+
+// val == flex-start | flex-end | center | space-between | space-around
+// default == flex-start
+@mixin flex-justify($value: flex-start) {
+  @if $value == flex-start {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+  } @else if $value == flex-end {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+  } @else if $value == space-between {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+  } @else if $value == space-around {
+    -ms-flex-pack: distribute;    
+  } @else {
+    -webkit-box-pack: #{$value};
+    -ms-flex-pack: #{$value};
+  }
+  -webkit-justify-content: #{$value};
+  -moz-justify-content: #{$value};
+  justify-content: #{$value};
+}

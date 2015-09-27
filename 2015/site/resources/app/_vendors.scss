@@ -1,0 +1,107 @@
+.vendor-hall-map-wrap {
+  background-image: url('http://bd4579002468ef404afa-8099c7257fe87d50d338ebe5e9167369.r97.cf2.rackcdn.com/2015-marketplace.jpg');
+  #vendor-hall-map {
+    display: none;
+  }
+}
+
+.map-vendor-booth-shape {
+  fill: rgb(255,255,255);
+  @include transition(all .2s);
+  &.active {
+    fill: rgba(255,255,255,.6);
+  }
+  &.selected {
+    fill: $bcPurple;
+  }
+}
+
+.map-vendor-booth {
+  cursor: pointer;
+}
+
+
+.qtip.qtip-vendor {
+  max-width: 250px;
+  min-width: 250px;
+}
+
+.vendors-at-booth {
+  li {
+    border-bottom: 1px dotted $bcGrey;
+    margin-bottom: 7px;
+    padding-bottom: 7px;
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    header {
+      font-weight: bold;
+    }
+    span {
+      display: block;
+      margin-top: 3px;
+    }
+    a {
+      color: $bcPurple;
+      @include transition(all .2s);
+      &:hover {
+        color: lighten($bcPurple, 20%);
+      }
+    }
+  }
+}
+
+
+
+.vendor-card {
+  display: inline-block;
+  margin: 10px;
+  width: 380px;
+  vertical-align: top;
+  header {
+    background: $bcPurple;
+    color: white;
+    padding: 5px;
+    small {
+      display: block;
+    }
+  }
+  h6 {
+    margin: 0;
+  }
+  .details {
+    border: 1px solid $lightGrey;
+    padding: 5px;
+    font-size: 14px;
+    @include box-sizing('border-box');
+  }
+  p {
+    margin: 0 0 10px 0;
+    line-height: 1.2em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &.marketplace-info {
+    background: $superLightGrey;
+    h6 {
+      color: $bcPurple;
+      margin-bottom: 10px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-top: 0;
+      &:before {
+        content: none;
+      }
+    }
+    span.day {
+      display: inline-block;
+      min-width: 120px;
+    }
+  }
+}

@@ -1,0 +1,107 @@
+/*-------------------------------------------
+  Partners Section (section.partners)
+-------------------------------------------*/
+
+section.partners {
+  // min-height: 135px;
+}
+
+
+/*-------------------------------------------
+  Footer (footer.primary)
+-------------------------------------------*/
+
+footer.primary {
+  .awesome-mascot {
+    width: 425px;
+  }
+}
+
+
+.announcement-strip {
+  &.jumbo-headline h2 {
+    font-size: 60px;
+  }
+}
+
+
+/*-------------------------------------------
+  Vendor Map
+-------------------------------------------*/
+
+.vendor-hall-map-wrap {
+  background-image: none;
+  padding-bottom: 50px;
+  text-align: center;
+  #vendor-hall-map {
+    display: inline-block;
+    margin-top: -100px;
+  }
+}
+
+
+
+.convention-hours {
+  @include flexbox();
+  & > div {
+    border-left: 1px solid $bcAzure;
+    margin-bottom: 0px;
+    @include flexbox();
+    @include flex(1);
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -o-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -o-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    @include flex-align(center);    
+    &:first-child {
+      border-left: none;
+    }
+  }
+}
+
+
+.guest-schedule {
+  @include flexbox();
+  & > div {
+    border-right: 1px solid $bcAzure;
+    margin-bottom: 0px;
+    @include box-sizing('border-box');
+    @include flexbox();
+    @include flex(1);
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -o-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: flex-start;
+    -moz-box-pack: flex-start;
+    -o-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    @include flex-align(center);
+    div {
+      @include box-sizing('border-box');
+    }
+    &:last-child {
+      border-right: none;
+    }
+    &.autographs {
+      max-width: 200px;
+      padding-right: 20px;
+    }
+    &.events div {
+      padding: 0 20px;
+      width: 100%;
+    }
+  }
+}

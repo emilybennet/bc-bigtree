@@ -1,0 +1,19 @@
+{
+  "name": "2015.bronycon.org",
+  "version": "1.18.1",
+  "license": "UNLICENSED",
+  "private": true,
+  "description": "core website for BronyCon 2015",
+  "author": "Emily Bennet <emily@bronycon.org>",
+  "dependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-cssmin": "~0.7.0",
+    "grunt-cachebuster": "~0.1.5",
+    "grunt-contrib-compass": "~0.7.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-watch": "~0.5.3"
+  }
+}
