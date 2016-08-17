@@ -1,0 +1,162 @@
+<?
+  
+  $navSocial = $cms->getSetting('footer_social_nav');
+  $footerLegal = $cms->getSetting('footer_legal');
+
+  $topLevel = $cms->getToplevelNavigationId();
+  $navFooter = $cms->getNavByParent(0, 1);
+
+  $footerImageMod = new footerImages();
+
+  if (isset($_GET['useFooter'])) {
+    $footerId = $_GET['useFooter'] * 1;
+    $footerImage = $footerImageMod->get($footerId);
+    $useFooter = $footerImage['image_retina'];
+  } elseif ($footerCollectionIdOverride) {
+    $footerImage = $footerImageMod->selectFooterImage($footerCollectionIdOverride);
+    $useFooter = $footerImage['image_retina'];
+  } elseif (!isset($_SESSION['bronycon_footer'])) {
+    $footerImage = $footerImageMod->selectFooterImage();
+    $_SESSION['bronycon_footer'] = $footerImage['image_retina'];
+    $useFooter = $footerImage['image_retina'];
+  } else {
+    $useFooter = $_SESSION['bronycon_footer'];
+  }
+
+?>
+
+      <section class="partners">
+        <div class="wrap">
+          <ul class="partner-list unstyled">
+            <!--partners-->
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </section>
+      
+      <footer class="primary">
+
+        <div class="wrap">
+          <img src="<?=$useFooter?>" class="awesome-mascot" />
+
+          <div class="footer-liner<?=(strpos($useFooter, 'upsidefun'))?' upsidefun':''?>">
+
+            <nav class="site">
+              <ul>
+                <? foreach ($navFooter as $navItem): ?>
+                <li><a href="<?=$navItem['link']?>" class="accent"><?=$navItem['title']?></a></li>
+                <? endforeach; ?>
+              </ul>
+            </nav>
+
+            <nav class="social">
+              <ul>
+                <? 
+                  foreach($navSocial as $socialItem):
+                    if (!empty($socialItem['class'])) {
+                      $socialClass = $socialItem['class'];
+                    } else {
+                      $socialClass = $cms->urlify($socialItem['title']);
+                    }
+                ?>
+                <li>
+                  <a href="<?=$socialItem['link']?>" class="ss-<?=$socialClass?>" target="_blank">
+                    <span><?=$socialItem['title']?></span>
+                  </a>
+                </li>
+                <? endforeach; ?>
+              </ul>
+            </nav>
+
+            <section class="baltimore-rocks">
+              <a href="http://madewithloveinbaltimore.org">Made with <em class="accent">&hearts;</em> in Baltimare</a>
+            </section>
+
+            <section class="lawyer-speak">
+              <?=str_replace("{CURRENT_YEAR}", date("Y"), $footerLegal)?>
+            </section>
+
+          </div>
+          <div class="clearfix"></div>
+        </div>
+
+      </footer>
+
+    </section>
+  </div>
+
+  <section class="old-ie-modal">
+    <header>
+      <small>There's no easy way to say this, but here we go &hellip;</small>
+      <h4>Your Browser is holding you back. <em>You've gotta move on!</em></h4>
+    </header>
+    <ul class="new-browsers unstyled">
+      <li>
+        <a href="https://www.google.com/chrome" target="_blank">
+          <span class="browser-icon chrome"></span>
+          <span class="label">Google Chrome</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.mozilla.org/en-US/firefox/" target="_blank">
+          <span class="browser-icon firefox"></span>
+          <span class="label">Firefox</span>
+        </a>
+      </li>
+      <li>
+        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">
+          <span class="browser-icon ie"></span>
+          <span class="label">Internet Explorer</span>
+        </a>
+      </li>
+      <li>
+        <a href="http://www.opera.com/" target="_blank">
+          <span class="browser-icon opera"></span>
+          <span class="label">Opera</span>
+        </a>
+      </li>
+    </ul>
+    <footer>
+      <span>No thanks. I understand this site may not display properly.</span>
+      <a href="#" class="btn btn-pink btn-close">Close Window</a>
+      <div class="clearfix"></div>
+    </footer>
+  </section>
+<?
+// Okay, let's get those js files
+$cachebusterFile = $server_root."site/cachebuster.php";
+
+if (file_exists($cachebusterFile)) {
+  $assetFiles = include $cachebusterFile;
+  foreach ($assetFiles['md5'] as $file => $fileHash) {
+    $f = pathinfo($file);
+    $asset = $www_root.$file;
+    if ($_SERVER['BIGTREE_ENV'] == 'prod') {
+      $asset .= '?v='.$fileHash;
+    }
+    if ($f['extension'] == 'js') {
+      echo '  <script src="'.$asset.'"></script>'.PHP_EOL;
+    }
+  }
+}
+?>
+
+  <script>
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32160925-1']);
+    _gaq.push(['_setDomainName', 'bronycon.org']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>  
+
+</body>
+
+</html>

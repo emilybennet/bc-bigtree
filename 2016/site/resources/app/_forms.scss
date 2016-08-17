@@ -1,0 +1,422 @@
+input, select, textarea {
+  outline: none;
+  -moz-appearance: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin placeholder-style() {
+  color: $form-placeholder-color;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin placeholder-style-focus() {
+  color: $form-plceholder-color-focus;
+}
+
+fieldset {
+  padding: 20px;
+  border-top: 1px solid $bcGreen;
+  legend {
+    padding: 0 10px;
+    color: $bcGreen;
+    font-family: $museoSlab;
+    font-size: $font-size-h5;
+    text-align: center;
+  }
+  .help-text {
+    font-size: $font-size-extra-small;
+    line-height: 1.6;
+    color: darken($bcGrey, 10%);
+    text-transform: uppercase;
+  }
+}
+
+input,
+textarea {
+  &::-webkit-input-placeholder{ @include placeholder-style(); }
+  &:-moz-placeholder { @include placeholder-style(); }
+  &::-moz-placeholder { @include placeholder-style(); }
+  &:-ms-input-placeholder { @include placeholder-style(); }
+  &:focus {
+    &::-webkit-input-placeholder{ @include placeholder-style-focus(); }
+    &:-moz-placeholder { @include placeholder-style-focus(); }
+    &::-moz-placeholder { @include placeholder-style-focus(); }
+    &:-ms-input-placeholder { @include placeholder-style-focus(); }    
+  }
+}
+
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input[type="search"],
+input[type="range"],
+textarea,
+select,
+.form-control {
+  display: inline;
+  width: 100%;
+  margin: 0;
+  background: $form-field-background-color;
+  font-size: $form-field-font-size;
+  line-height: 1.1;
+  padding: $form-field-padding;
+  border: 1px solid;
+  border-color: $form-field-border-color;
+  vertical-align: auto;
+  zoom: 1;
+  @include border-radius($form-field-border-radius);
+  @include box-sizing('border-box');
+  @include transition(all .2s);
+  &:hover {
+    border-color: $form-field-border-color-hover;
+  }
+  &:focus {
+    border-color: $form-field-border-color-focus;
+    @include box-shadow(inset 0 1px 2px rgba(0,0,0,0.3));
+  }
+  &.input-sm {
+    font-size: $form-field-font-size-small;
+    padding: $form-field-padding-small;
+  }
+  &.input-lg {
+    font-size: $form-field-font-size-large;
+    padding: $form-field-padding-large;
+  }
+}
+
+.form-element {
+  margin-bottom: 20px;
+  z-index: 0;
+
+  label {
+    display: block;
+    color: $black;
+    font-family: $proxima;
+    font-weight: bold;
+    font-size: $form-field-label-size;
+  }
+
+  input[type="search"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    @include border-radius(44px);
+  }
+
+  &.multi-field {
+    input {
+      margin: 0 5px 5px 0;
+    }
+  }
+
+  &.has-error {
+    input, input.error {
+      border-color: $form-error-color;
+    }
+    span.help-block, span.form-error {
+      color: $form-error-color;
+    }
+  }
+
+  &.chosen-parent-active {
+    z-index: 10;
+  }
+}
+
+// input groups
+
+.input-group {
+  display: table;
+  border-collapse: separate;
+  margin-bottom: 5px;
+
+  input {
+    display: table-cell;
+  }
+
+  .input-group-addon,
+  .input-group-btn {
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+  }
+}
+
+// Text input groups
+// -------------------------
+.input-group-addon {
+  display: table-cell;
+  padding: $form-field-padding;
+  font-size: $form-field-font-size;
+  font-weight: normal;
+  line-height: 1;
+  color: $form-field-color;
+  text-align: center;
+  background-color: $form-field-group-addon-background;
+  border: 1px solid;
+  border-color: $form-field-group-addon-border-color;
+  @include border-radius($form-field-border-radius);
+  @include box-sizing('border-box');
+
+
+  // Sizing
+  &.input-sm {
+    font-size: $form-field-font-size-small;
+    padding: $form-field-padding-small;
+  }
+  
+  // &.input-lg {
+  //   padding: $padding-large-vertical $padding-large-horizontal;
+  //   font-size: $font-size-large;
+  //   border-radius: $border-radius-large;
+  // }
+
+  // Nuke default margins from checkboxes and radios to vertically center within.
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-top: 0;
+  }
+}
+
+// Reset rounded corners
+.input-group .form-control:first-child,
+.input-group-addon:first-child,
+.input-group-btn:first-child > .btn,
+.input-group-btn:first-child > .dropdown-toggle,
+.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
+  @include border-right-radius(0);
+}
+.input-group-addon:first-child {
+  border-right: 0;
+}
+.input-group .form-control:last-child,
+.input-group-addon:last-child,
+.input-group-btn:last-child > .btn,
+.input-group-btn:last-child > .dropdown-toggle,
+.input-group-btn:first-child > .btn:not(:first-child) {
+  @include border-left-radius(0);
+}
+.input-group-addon:last-child {
+  border-left: 0;
+}
+
+.input-group-addon:not(:first-child):not(:last-child), 
+.input-group-btn:not(:first-child):not(:last-child), 
+.input-group .form-control:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+
+// Button input groups
+// -------------------------
+.input-group-btn {
+  display: table-cell;
+  position: relative;
+  white-space: nowrap;
+
+  // Negative margin to only have a 1px border between the two
+  &:first-child > .btn {
+    margin-right: -1px;
+  }
+  &:last-child > .btn {
+    margin-left: -1px;
+  }
+}
+.input-group-btn > .btn {
+  position: relative;
+  // Jankily prevent input button groups from wrapping
+  + .btn {
+    margin-left: -4px;
+  }
+  // Bring the "active" button to the front
+  &:hover,
+  &:active {
+    z-index: 2;
+  }
+}
+
+
+// Chosen Appearance
+// -----------------
+
+.chosen-container {
+  background: $form-field-background-color;
+  font-size: $form-field-font-size;
+  line-height: 1.1;
+  padding: $form-field-padding;
+  border: 1px solid;
+  border-color: $form-field-border-color;
+  vertical-align: auto;
+  zoom: 1;
+  @include border-radius($form-field-border-radius);
+  @include box-sizing('border-box');
+  @include transition(all .2s);
+  &:hover {
+    border-color: $form-field-border-color-hover;
+  }
+  a.chosen-single span {
+    color: $black;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a.chosen-single.chosen-default span {
+    color: $form-placeholder-color;
+    &:hover {
+      color: $form-plceholder-color-focus;
+    }
+  }
+  .chosen-drop {
+    border-color: $form-field-border-color;
+    background: $form-field-background-color;
+  }
+  &.chosen-container-active {
+    border-color: $form-field-border-color-focus;
+    .chosen-drop {
+      border-color: $form-field-border-color-focus;
+    }
+  }
+}
+
+.chosen-container .chosen-results {
+  li {
+    &.highlighted {
+      background-color: $bcPurple;
+      color: white;
+    }
+  }
+}
+
+.chosen-container-multi{
+  margin-top: 5px;
+  .chosen-choices li {
+    &:before {
+      content: '';
+    }
+    // &.search-field input, &.search-choice {
+    //   margin: 0 3px 0px 0;
+    //   padding: 4px 20px 3px 5px;
+    // }
+    &.search-field {
+      padding: 0;
+      margin: 0;
+      input {
+        margin: 2px 3px 2px 0;
+        padding: 0;
+        height: 22px;
+        color: $form-placeholder-color;
+        @include transition(none);
+      }
+    }
+    &.search-choice {
+      margin: 1px 3px 1px 0;
+      padding: 4px 20px 3px 5px;
+      background: $bcPurple;
+      color: $white;
+      @include border-radius($form-field-border-radius);
+    }
+  }
+}
+
+// picker
+// ------
+
+.picker { 
+
+  .picker-label { 
+    color: $form-field-color; 
+    font-size: $form-field-label-size;
+    line-height: 20px;
+  }
+
+  .picker-handle { 
+    background: $form-field-background-color;
+    border-color: $form-field-border-color;
+    @include transition(all .2s);
+  }
+
+  &:hover {
+    .picker-handle {
+      border-color: $form-field-border-color-hover;
+    }
+  }
+
+  &.focus {
+    .picker-label {
+      color: $form-field-color;
+    }
+
+    .picker-handle {
+      border-color: $form-field-border-color-focus;
+    }    
+  }
+
+  // radio input
+  &.picker-radio {
+
+    .picker-flag {
+      // background: $form-field-border-color-focus;
+    }
+
+    &.focus .picker-flag {
+      background: $form-field-border-color-focus;
+    }
+
+    &.checked .picker-flag {
+      background: $form-field-border-color-focus;
+    }
+  }
+
+  // checkbox input
+  
+  &.picker-checkbox {
+    .picker-handle {
+      @include border-radius($form-field-border-radius);
+    }
+
+    .picker-flag { 
+      @include border-radius(0);
+      position: relative;
+      display: block;
+      // margin: 3px;  
+      height: 100%; 
+      width: 100%;
+    }
+
+    &.checked .picker-flag {
+      // background: $form-field-border-color-focus;
+      &:after {
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        color: $form-field-border-color-focus;
+        content: "\00D7";
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 21px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// one offs
+
+form.press-request {
+  .form-action-buttons {
+    text-align: center;
+  }
+}

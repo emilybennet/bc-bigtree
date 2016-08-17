@@ -1,0 +1,35 @@
+.bronycon-tooltip {
+  border-color: $bcPurple;
+  background-color: $bcPurple;
+  color: white;
+  padding: 5px 0;
+  .qtip-titlebar {
+    background-color: $bcPurple;
+    border-bottom: 1px solid white;
+    margin: 0 10px;
+    padding: 5px 30px 5px 0px;
+    .qtip-close {
+      background-color: transparent;
+      border-color: white;
+      color: white;
+      @include border-radius(0px);
+      &:hover {
+        border-color: rgba(white, .7);
+        color: rgba(white, .7);
+      }
+    }
+  }
+  li a {
+    border-bottom: 1px dotted white;
+    color: white;
+    display: inline-block;
+  }
+}
+
+.bronycon-tooltip-orange {
+  border-color: $bcMagenta;
+  background-color: $bcMagenta;
+  .qtip-titlebar {
+    background-color: $bcMagenta;
+  }
+}

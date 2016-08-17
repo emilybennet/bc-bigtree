@@ -1,0 +1,278 @@
+//
+// Registration
+// --------------------------------------------------
+
+.badge-type-list {
+
+  .badge-card {
+    margin-bottom: 30px;
+    width: 100%;
+    background: $pureWhite;
+    border: 1px solid rgb(239,239,239);
+
+    header {
+      padding: 0 10px;
+      height: 50px;
+      line-height: 50px;
+      color: $white;
+      background: $bcPurple;
+      .label {
+        display: inline-block;
+        padding-right: 10px;
+        font-weight: bold;
+        font-size: $font-size-h5;
+      }
+      .register {
+        float: right;
+        .at-the-door {
+          display: block;
+          font-size: 75%;
+          line-height: 1.2em;
+          padding: 17px 5px;
+        }
+      }
+    }
+  }
+
+}
+
+
+.badge-types-table {
+
+  header, li {
+    section {
+      float: left;
+      &.key {
+        width: 40%;
+        @include box-sizing('border-box');
+        span {
+          padding: 7px 10px;
+        }
+      }
+      &.badge {
+        width: 10%;
+        text-align: center;
+      }
+      span {
+        cursor: default;
+        @include transition(background-color .1s ease);
+      }
+    }
+  }
+
+  header {
+    // background: $lightGrey;
+    span.label-wrap {
+      padding: 7px 0;
+      border-left: 1px solid $lightGrey;
+    }
+    span {
+      display: block;
+      &.btn {
+        display: inline-block;
+      }
+      &.label {
+        font-size: $font-size-xs;
+      }
+      &.price {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      &.register {
+        padding: 10px 0;
+        .at-the-door {
+          display: block;
+          font-size: 75%;
+          line-height: 1.2em;
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+
+  section.active span.highlight {
+    background: $bcOrange;
+    color: $white;
+  }
+
+  li {
+    clear: both;
+    section {
+      display: table;
+      min-height: 40px;
+      &.key span {
+        display: table-cell;
+        font-size: 90%;
+        vertical-align: top;
+      }
+    }
+    .badge span {
+      text-align: center;
+      &.highlight {
+        border-left: 1px solid $lightGrey;
+        display: table-cell;
+        vertical-align: middle;
+      }
+      .check.desc-text {
+        display: inline-block;
+        font-family: $proxima;
+        font-size: 85%;
+        line-height: 1em;
+      }
+    }
+    &:nth-child(even) {
+      background: $superLightGrey;
+    }
+  }
+
+  .btn {
+    font-family: $proximaCon;
+    text-transform: uppercase;
+    font-size: 13px;
+  }
+
+}
+
+.other-badges {
+  text-align: center;
+  .section-heading {
+    margin: 100px 0;
+  }
+  .alt-badge-card {
+    display: block;
+    margin-bottom: 5px;
+    padding: 20px;
+    width: 100%;
+    height: 200px;
+    background: $superLightGrey;
+    vertical-align: top;
+    @include box-sizing('border-box');
+    @include transition('background .2s');
+    .card-liner {
+      display: table;
+      width: 100%;
+      height: 100%;
+    }
+    .card-content {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    p {
+      font-size: $font-size-h7;
+      line-height: 1.3em;
+      color: $bcGrey;
+    }
+    .btn {
+      color: $bcCyan;
+      border-color: $bcCyan;
+      @include transition(none);
+    }
+    &:hover {
+      background: $bcCyan;
+      h4, p {
+        color: $white;
+      }
+      .btn {
+        @include button-variant($white, $white);
+      }
+    }
+  }
+}
+
+
+.sale-banner {
+  margin: -20px 0 30px;
+  padding: 20px;
+  width: 100%;
+  @include border-radius(3px);
+  @include box-sizing(border-box);
+  &.pony-pattern-azure {
+    background: image-url('bc-patterns-azure.png') #3d86c6 repeat scroll;
+    .btn.btn-fill-white {
+      color: #3d86c6 !important;
+    }
+  }
+
+  h3 {
+    color: white;
+    margin: 0px 0 10px;
+  }
+
+  p {
+    color: white;
+    &:last-of-type {
+      margin-bottom: 0px;
+    }
+  }
+
+  &.muffin-sale {
+    background: image-url('bc-patterns-muffin.jpg') #F7EECF repeat scroll;
+    @include transform(rotate(-2deg));
+    .btn.btn-fill-white {
+      color: $bcPurple !important;
+    }
+    h3, p {
+      color: $bcPurple;
+    }
+  }
+
+}
+
+footer.disclaimer-text {
+  padding: 20px 0;
+  text-align: center;
+
+  p.disclaimer {
+    background: $bcCyan;
+    color: $white;
+    display: inline-block;
+    font-size: 90%;
+    padding: 5px 7px;
+    text-align: center;
+    @include border-radius(3px);
+
+    a {
+      border-bottom: 1px dotted $white;
+      color: $white;
+      text-decoration: none;
+      &:hover {
+        border-bottom-style: none;
+      }
+    }
+  }
+
+}
+
+.sponsor-thank-you {
+  ul {
+    text-align: center;
+  }
+  li {
+    display: inline-block;
+    font-size: 80%;
+    margin: 0;
+    padding: 0 10px;
+    &:before {
+      content: '';
+      display: none;
+    }
+  }
+}
+
+.badge-pickup-hours {
+  h3 {
+    color: #FFEB5F;
+  }
+  ul {
+    color: white;
+    li:before {
+      display: none;
+    }
+  }
+  span.day-block {
+    display: inline-block;
+    font-weight: bold;
+    width: 200px;
+  }
+}

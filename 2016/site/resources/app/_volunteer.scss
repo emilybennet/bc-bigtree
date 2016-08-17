@@ -1,0 +1,32 @@
+
+.volunteer {
+  .volunteer-action {
+    text-align: center;
+  }
+  .btn-lg {
+    margin: 20px 0 50px;
+  }
+}
+
+
+// staff applications
+
+.volunteer-staff {
+  .role {
+    border-bottom: 1px dotted $lightGrey;
+    margin: 30px 0 15px;
+    padding-bottom: 15px;
+    &:last-child {
+      border-bottom: none;
+    }
+    .btn-sm {
+      padding: 5px 10px 3px;
+      position: absolute;
+      right: 0px;
+      top: -4px;
+    }
+  }
+  .role-description {  
+    font-size: $font-size-small;
+  }
+}

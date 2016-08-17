@@ -1,0 +1,170 @@
+//
+// Site Header
+// --------------------------------------------------
+
+
+header.primary {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  min-height: 45px;
+  font-family: $museoSlab;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+
+  &.i-just-dont-know-what-went-wrong {
+    height: 60px;
+    background: rgba(250,250,250,.7);
+    @include box-shadow(0px 2px 2px rgba($black,.2));
+  }
+
+  a, &:before {
+    color: $white;
+    display: inline-block;
+    // @include transition(color .2s);
+  }
+
+  li {
+    display: inline-block;
+
+    &:hover {
+      > a {
+        // background: $bcDarkBlue;
+        // background: rgba($bcDarkBlue,.95);
+        background: $bcAzure;
+        background: rgba($bcAzure,.85);
+        color: $white;
+      }
+      .sub-nav {
+        display: block;
+        // background: $bcDarkBlue;
+        // background: rgba($bcDarkBlue,.95);
+        background: $bcAzure;
+        background: rgba($bcAzure,.85);
+      }
+    }
+  }
+
+  &.sticker {
+    a, &:before {
+      color: $bcDarkBlue;
+      // color: $bcAzure;
+      background: $white;
+    }
+
+    li {
+
+      .sub-nav {
+        li {
+          margin-left: 0;
+        }
+        a {
+          color: $white;
+          background: transparent;
+        }
+      }
+
+      &:hover {
+        > a {
+          // background: $bcDarkBlue;
+          // background: rgba($bcDarkBlue,.95);
+          background: $bcAzure;
+          background: rgba($bcAzure,.85);
+        }
+      }
+
+    }
+  }
+
+  .sub-nav {
+    display: none;
+    position: absolute;
+    min-width: 200px;
+    font-family: $proximaCon;
+    font-weight: 600;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.3em;
+    li {
+      display: block;
+    }
+    a {
+      display: block;
+      height: auto;
+      padding: 7px 15px;
+      border: none;
+
+      &.external span:after {
+        position: relative;
+        font-size: 80%;
+        margin-left: 5px;
+        font-family: 'Glyphicons Regular';
+        content: '\E390';
+      }
+    }
+  }
+
+  .brand {
+    display: inline-block;
+    margin: 0;
+    width: 180px;
+    height: 53px;
+    background: image-url('bronycon-logo.png') no-repeat scroll transparent;
+    @include background-size('180px 53px');
+    text-indent: -99999px;
+    z-index: 55;
+
+    &.sticker {
+      width: 180px;
+      height: 55px;
+      background: image-url('bronycon-sticker-neo-logo.png') no-repeat scroll transparent;
+      // background: image-url('horsecon-sticker-neo-logo.png') no-repeat scroll transparent;
+      @include background-size('180px 50px'); 
+    }
+
+    h1 {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .nav-slider-control {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    height: 28px;
+    padding: 0 5px;
+    a {
+    }
+    span {
+      display: none;
+      line-height: 27px;
+      &.glyphicon-font {
+        display: inline-block;
+        -webkit-font-smoothing: subpixel-antialiased;
+      }
+    }
+  }
+}
+
+
+
+/*-------------------------------------------
+  Header-band
+  the art that runs along the top of dull pages
+-------------------------------------------*/
+
+.header-band {
+  background: $bcCyan;
+  background-position: center center;
+  min-height: 300px;
+  // position: fixed;
+  width: 100%;
+  @include background-size(cover);
+  &.legacy-height {
+    min-height: 250px;
+  }
+}
