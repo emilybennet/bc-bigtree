@@ -1,0 +1,140 @@
+.home-theater {
+    background: image-url("bc-patterns-violet.png");
+    padding: 120px 0 50px;
+    min-height: 500px;
+    text-align: center;
+
+    .video-viewer {
+        height: 250px;
+        margin-bottom: 50px;
+        width: 100%;
+    }
+
+    .video-offline {
+        border: 3px solid rgba($white, .4);
+        display: inline-block;
+        height: 200px;
+        margin-bottom: 50px;
+        width: 100%;
+        @include box-sizing(border-box);
+
+        h3 {
+            color: $white;
+            font-size: 100%;
+            margin: 0 auto;
+            position: relative;
+            text-align: center;
+            top: 50%;
+            @include transform(translateY(-50%));
+            width: 80%;
+        }
+    }
+
+    .theater-cards {
+        margin: 0 auto;
+        padding: 10px;
+        max-width: 960px;
+
+        .card {
+            display: block;
+            margin-bottom: 40px;
+            min-height: 225px;
+            vertical-align: top;
+
+            .image-tease {
+                background: rgba(0,0,0,.2) no-repeat scroll center center;
+                background-size: cover;
+                height: 80px;
+                overflow: hidden;
+            }
+
+            h5 {
+                color: white;
+                margin-top: 5px;
+                text-align: left;
+            }
+
+        }
+    }
+
+    @media only screen and (min-width: 480px) {
+        .card {
+            margin-bottom: 20px;
+            width: 45%;
+            &:nth-child(odd) {
+                float: left;
+                marign-left: 0;
+            }
+            &:nth-child(even) {
+                float: right;
+                marign-right: 0;
+            }
+        }
+    }
+
+
+    @media only screen and (min-width: 640px) {
+        .video-viewer {
+            height: 360px;
+            width: 640px;
+        }
+    }
+
+    @media only screen and (min-width: 760px) {
+        .theater-cards {
+
+            .card {
+                margin-bottom: 0;
+                padding: 0;
+            }
+
+            &.layout-halfs .card {
+                margin-bottom: 20px;
+                width: 45%;
+                &:nth-child(odd) {
+                    float: left;
+                    marign-left: 0;
+                }
+                &:nth-child(even) {
+                    float: right;
+                    marign-right: 0;
+                }
+            }
+
+            &.layout-thirds .card {
+                float: none;
+                width: 30%;
+                display: inline-block;
+                margin: 0 2% 20px;
+                &:nth-child(3n+1) {
+                    float: none;
+                    margin-left: 0;
+                }
+                &:nth-child(3n+3) {
+                    float: none;
+                    margin-right: 0;
+                }
+            }
+
+        }
+    }
+
+    @media only screen and (min-width: 960px) {
+
+        .video-viewer {
+            height: 480px;
+            width: 853px;
+        }
+
+        .video-offline {
+            height: 480px;
+            width: 853px;
+
+            h3 {
+                font-size: $font-size-h3;
+            }
+        }
+
+    }
+
+}

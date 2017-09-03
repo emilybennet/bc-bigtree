@@ -1,0 +1,166 @@
+h2 {
+    font-family: $museoSlab;
+    font-size: $font-size-h2;
+    font-weight: $headings-weight-default;
+    line-height: $headings-line-height;
+    margin-top: $line-height-base;
+    margin-bottom: $line-height-base;
+}
+
+h5 {
+    font-family: $museoSlab;
+    font-size: $font-size-h5;
+    font-weight: $headings-weight-default;
+    line-height: $headings-line-height;
+    margin-top: ($line-height-base/2);
+    margin-bottom: ($line-height-base/2);
+}
+
+.schedule-calendar-page.wrap {
+    padding-bottom: 0px;
+}
+
+.mega-schedule {
+    background: $bcAzure;
+    font-size: 80%;
+    line-height: 1.23em;
+    max-width: 100%;
+    overflow-x: scroll;
+
+    * {
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .time-slots {
+        margin: 0;
+        padding: 0;
+    }
+
+    .time-slot {
+        border-top: 1px solid $superLightGrey;
+        height: 30px;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        &:nth-child(odd) {
+            border-top: 1px solid $lightGrey;
+        }
+        &:before {
+            display: none;
+        }
+    }
+
+
+    .schedule-structure {
+        display: flex;
+        max-width: 100%;
+        z-index: 5;
+
+        & > section {
+            background: white;
+            border-left: 1px solid $bcGrey;
+            flex: 1;
+            min-height: 500px;
+            min-width: 250px;
+
+            &.time-scale {
+                background: $bcAzure;
+                color: white;
+                min-width: 50px;
+                max-width: 60px;
+                text-align: right;
+                .time-slots {
+                    top: -9px;
+                }
+                .time-slot {
+                    border-top: none;
+                    padding-right: 5px;
+                }
+            }
+        }
+    }
+
+    header.schedule-structure {
+        section {
+            background: $bcAzure;
+            border: none;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            font-weight: bold;
+            justify-content: center;
+            min-height: 60px;
+            padding: 5px;
+            text-align: center;
+            width: 100%;
+
+            small {
+                display: block;
+            }
+        }
+    }
+
+    header.schedule-day {
+        background: $bcAzure;
+        color: white;
+        padding: 30px 0 30px 70px;
+        h2 {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .event {
+        background: #cccccc;
+        border: 2px solid white;
+        box-sizing: border-box;
+        cursor: pointer;
+        font-size: 10px;
+        height: 60px;
+        line-height: 1.23em;
+        overflow: hidden;
+        padding: 5px 12px 5px 5px;
+        position: absolute;
+        top: 24%;
+        width: 100%;
+    }
+
+    .event-track {
+        position: absolute;
+        height: 24px;
+        right: -12px;
+        top: -12px;
+        width: 24px;
+        transform: rotate(-45deg);
+        z-index: 5;
+        &:nth-child(3) {
+            right: -3px;
+            z-index: 2
+        }
+    }
+
+}
+
+.convention-hours {
+    & > div {
+        margin-bottom: 30px;
+    }
+    h3 {
+        color: $bcAzure;
+        font-size: $font-size-h5;
+        margin-top: 0;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    li:before {
+        display: none;
+    }
+    .day-block {
+        font-weight: bold;
+        display: inline-block;
+        width: 200px;
+    }
+}

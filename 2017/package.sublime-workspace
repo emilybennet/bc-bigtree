@@ -1,0 +1,245 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"space",
+				"space-between"
+			],
+			[
+				"booth",
+				"booth_number"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 187.0,
+		"last_filter": "inc",
+		"selected_items":
+		[
+			[
+				"inc",
+				"Indentation: Convert to Tabs"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/ebennet/Downloads/2017 Staff Badges - Vendor Relations.csv",
+		"/Users/ebennet/Dropbox/bronycon/Design Team Management/2017 Staff Badges - New/Data/2017 Staff Badges - Vendor Relations.csv",
+		"/Users/ebennet/Downloads/2017 Staff Badges - Security.csv",
+		"/Users/ebennet/Downloads/2017 Staff Badges - Registration.csv",
+		"/Users/ebennet/Downloads/2017 Staff Badges - PR.csv",
+		"/Users/ebennet/Downloads/2017 Staff Badges - Finance.csv",
+		"/Users/ebennet/Downloads/2017 Staff Badges - Events.csv",
+		"/Users/ebennet/Downloads/2017 Staff Badges - Con Ops.csv",
+		"/Users/ebennet/Dropbox/bronycon/Design Team Management/2017 Staff Badges - New/Data/2017 Staff Badges - Con Ops.csv",
+		"/Users/ebennet/Dropbox/bronycon/Design Team Management/2017 Staff Badges - New/Data/2017 Staff Badges - Lunar Solis.csv",
+		"/Users/ebennet/Dropbox/bronycon/Design Team Management/2017 Staff Badges - New/Data/2017 Staff Badges - Design.csv",
+		"/Users/ebennet/Dropbox/bronycon/Design Team Management/2017 Staff Badges - New/Data/2017 Staff Badges - Mascot.csv",
+		"/Users/ebennet/Dropbox/bronycon/Design Team Management/2017 Staff Badges - New/Data/2",
+		"/Users/ebennet/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/ebennet/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/ebennet/Downloads/conbook-schedule-20170727-005359.xml",
+		"/Users/ebennet/Downloads/conbook-schedule-20170727-004420.xml",
+		"/Users/ebennet/Downloads/conbook-schedule-20170727-003628.xml",
+		"/Users/ebennet/Downloads/conbook-schedule-20170726-023149.xml",
+		"/Users/ebennet/Downloads/conbook-schedule-20170726-022431.xml",
+		"/Users/ebennet/Projects/learn/react/treehouse/react-webpack-for-react/scoreboard/node_modules/react-hot-loader/node_modules/source-map/lib/source-map/source-map-generator.js",
+		"/Users/ebennet/Dropbox/bronycon/Design Team Management/Emily's Notes/2016/EVERYTHING We Need To Do.mdown",
+		"/Users/ebennet/Dropbox/bronycon/Design Team Management/Emily's Notes/2016/EVERYTHING We Need To Do - timeline.mdown",
+		"/Users/ebennet/Desktop/BronyCon Font Kit/README.md",
+		"/Users/ebennet/Desktop/printer questions.md",
+		"/Users/ebennet/Desktop/messages/1.json",
+		"/Users/ebennet/Desktop/Pokemon testing/pokedexSvc.js",
+		"/Users/ebennet/Desktop/flickr creds.md",
+		"/Users/ebennet/Projects/test2/suggester-flat/config.js",
+		"/Users/ebennet/Projects/test2/suggester-flat/apps-android3.json",
+		"/Volumes/Apolo Backup/Users/ebennet/Projects/Millennial Media/Offer Wall/suggester-flat/config.js",
+		"/Volumes/Apolo Backup/Users/ebennet/Projects/Millennial Media/Offer Wall/JSON Config/apps-android3.json",
+		"/Users/ebennet/Downloads/qa-rest-api/qa-rest-api-completed/routes.js",
+		"/Users/ebennet/Dropbox/Con Temp/pkmn/gyarados (orlando).md",
+		"/Users/ebennet/Dropbox/Con Temp/survey questions.md",
+		"/Users/ebennet/Dropbox/bronycon/Design Team Management/Emily's Notes/2016/Meeting Notes - Design/20150830-2030.mdown",
+		"/Users/ebennet/Desktop/bronycon design - network settings.md",
+		"/Users/ebennet/Desktop/schedule changes.markdown",
+		"/Users/ebennet/Projects/BronyCon/2016-temp/templates/routed/vendors/default.php",
+		"/Users/ebennet/Projects/BronyCon/2016-temp/templates/routed/guests/guest.php",
+		"/Users/ebennet/Projects/BronyCon/2016-temp/custom/inc/modules/vendor.php",
+		"/Users/ebennet/Projects/BronyCon/2016-temp/site/js/vendor-layout.js",
+		"/Users/ebennet/Projects/BronyCon/andy/templates/basic/event-schedule.php",
+		"/Users/ebennet/Projects/BronyCon/2016-temp/custom/inc/modules/scheduled-events.php",
+		"/Users/ebennet/Desktop/staff alpha.markdown",
+		"/Users/ebennet/Projects/BronyCon/schedule-importer/index.js",
+		"/Users/ebennet/Dropbox/CardMachine/TSSSF_CardGen_JSON_BronyCon.py",
+		"/Users/ebennet/Dropbox/bronycon/My Projects/2016/Pin assets for Igor/Design team gift pin/specs - Design team gift pin.markdown",
+		"/Users/ebennet/Dropbox/bronycon/My Projects/2016/Pin assets for Igor/LSC service award pin/specs - 5yr service award.markdown",
+		"/Users/ebennet/Dropbox/bronycon/My Projects/2016/Pin assets for Igor/2016 general sale pin/specs - 2016 general sale pin.markdown",
+		"/Users/ebennet/Downloads/disunity-master/README.md",
+		"/Users/ebennet/Dropbox/Con Temp/PKMN CODES.MD",
+		"/Users/ebennet/Dropbox/Con Temp/awesome con email to send.md",
+		"/Users/ebennet/Desktop/effects.js",
+		"/Users/ebennet/Dropbox/bronycon/Design Team Management/Emily's Notes/2016/Meeting Notes - Design/20160410-2030.mdown",
+		"/Users/ebennet/Projects/BronyCon/schedule-screen-demo/data/friday.json",
+		"/Users/ebennet/Projects/jsdemo/treehouse/mean-todo/webpack.config.js"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"show_en",
+			"Bronypaloo",
+			"bronypaloo",
+			"BronyPaloo",
+			"font",
+			"やまふだ",
+			"the_grid",
+			"data-booth",
+			"Theodor",
+			"1969",
+			"-"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "package.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 225.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

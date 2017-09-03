@@ -1,0 +1,24 @@
+ff(displayName, fileName, weight = 'regular', style = 'normal') {
+    @font-face {
+        font-family: displayName;
+        src: url('/site/type/'+fileName+'.eot');
+        src: url('/site/type/'+fileName+'.eot?#iefix') format('embedded-opentype'), url('/site/type/'+fileName+'.woff') format('woff'), url('/site/type/'+fileName+'.ttf') format('truetype');
+        if weight is a 'string' {
+            font-weight: unquote(weight);
+        } else {
+            font-weight: weight;
+        }
+        if style is a 'string' {
+            font-style: unquote(style);
+        } else {
+            font-style: style;
+        }
+    }
+}
+
+ff('museo-slab', 'museo-slab-500', 500);
+ff('museo-slab', 'museo-slab-700', 700);
+ff('proxima-nova', 'proxima-nova-regular');
+ff('proxima-nova', 'proxima-nova-italic', 'regular', 'italic');
+ff('proxima-nova', 'proxima-nova-bold', 'bold');
+ff('proxima-nova', 'proxima-nova-bold-italic', 'bold', 'italic');
