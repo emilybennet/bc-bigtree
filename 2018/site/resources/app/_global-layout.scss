@@ -1,0 +1,139 @@
+//
+// Global Layout
+// --------------------------------------------------
+
+::selection {
+  background: $bcPink;
+  color: white;
+  @include text-shadow(none);
+}
+
+.clearfix {
+  clear: both;
+}
+
+* {
+  position: relative;
+  z-index: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  // background: $black;
+  background: $white;
+  color: $black;
+  font-family: $proxima;
+  font-size: $font-size-base;
+  font-weight: $font-weight-default;
+  line-height: $line-height-base;
+}
+
+.wrap {
+  padding: 10px;
+  text-align: center;
+  &.content-page {
+    text-align: left;
+    padding-bottom: 60px;
+  }
+}
+
+.content {
+  background: $white;
+  // &.header-band-bump {
+    // margin-top: 250px;
+  // }
+}
+
+.global-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.site-wrapper {
+  position: relative;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: $black;
+  overflow: hidden;
+  @include box-shadow(0px 0px 5px black);
+  @include transition(right .2s);
+
+  .nav-slider-open & {
+    right: -270px;
+  }
+}
+
+.irc-chat {
+  width: 100%;
+  height: 400px;
+  margin-top: 20px;
+}
+
+.contact-methods {
+  margin-top: 30px;
+}
+
+
+.quad-card {
+  display: block;
+  margin-bottom: 5px;
+  padding: 20px;
+  width: 100%;
+  height: 200px;
+  background: $superLightGrey;
+  vertical-align: top;
+  @include box-sizing('border-box');
+  @include transition('background .2s');
+  .card-liner {
+    display: table;
+    width: 100%;
+    height: 100%;
+  }
+  .card-content {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  p {
+    font-size: $font-size-h7;
+    line-height: 1.3em;
+    color: $bcGrey;
+  }
+  .btn {
+    color: $bcCyan;
+    border-color: $bcCyan;
+    @include transition(none);
+  }
+  &:hover {
+    background: $bcCyan;
+    h4, p {
+      color: $white;
+    }
+    .btn {
+      @include button-variant($white, $white);
+    }
+  }
+
+  &.contact-cards {
+    height: 150px;
+    background: transparent;
+    border: 1px solid $lightGrey;
+    cursor: pointer;
+    p {
+      color: $black;
+    }
+    &:hover {
+      border-color: $bcCyan;
+      background: $bcCyan;
+      h5, p {
+        color: white;
+      }
+    }
+  }
+}

@@ -1,0 +1,153 @@
+//
+// Home layout specifics
+// --------------------------------------------------
+
+
+/*-------------------------------------------
+  Blue Band (.blue-band)
+  Used for Dateline (.dateline)
+-------------------------------------------*/
+
+.header-band.home {
+  // background: image-url('bc-patterns-azure.png') scroll repeat $bcDarkBlue;
+  background: $white;
+  min-height: 100px;
+  position: relative;
+  z-index: 20;
+  h3 {
+    background: $white;
+    color: $bcAzure;
+    display: block;
+    font-size: $font-size-h4;
+    margin: 0;
+    padding: 14px 20px;
+    text-align: center;
+    span {
+      display: block;
+    }
+  }
+  .tab-wrapper {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding-top: 80px;
+  }
+}
+
+.blue-band {
+  width: 100%;
+  // background: image-url('bc-patterns-azure.png') scroll repeat $bcDarkBlue;
+  background: $white;
+  text-align: center;
+  color: $bcAzure;
+  font-size: 20px;
+  padding: 30px 0;
+}
+
+.dateline {
+  h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  p {
+    font-style: italic;
+    max-width: 500px;
+    margin: 10px auto;
+  }
+}
+
+
+
+/*-------------------------------------------
+  Announcement Strips
+-------------------------------------------*/
+
+.announcement-strip {
+  background: no-repeat scroll center center;
+  @include background-size("cover");
+  border-bottom: 10px solid $white;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  
+  .foreground {
+    display: inline-block;
+    max-width: 95%;
+  }
+  
+  .announcement-copy {
+    display: block;
+    min-width: 0;
+    h2 {
+      font-size: $font-size-h3;
+      margin-bottom: 15px;
+    }
+  }
+
+  .wrap {
+    padding: 30px 0;
+  }
+
+  h2 {
+    margin-top: 0;
+    small {
+      display: block;
+      font-size: 45%;
+      font-weight: bold;
+    }
+  }
+
+  .btn {
+    margin-bottom: 10px;
+  }
+
+  &.highlight-box {
+    color: $bcMagenta;
+  }
+
+  &.image-title {
+    .announcement-copy img.title {
+      display: inline-block;
+      max-width: 80%;
+    }
+  }
+
+  &.fg-align-bottom {
+    .wrap {
+      padding-bottom: 0px;
+    }
+  }
+
+  &.fg-align-top {
+    .wrap {
+      padding-top: 0px;
+    }
+  }
+
+}
+
+
+.important-announcement {
+
+  .wrap {
+    background: white;
+    color: $bcGrey;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 1.65em;
+    margin: 0 auto;
+    max-width: 700px;
+    text-align: left;
+    @include box-sizing('border-box');
+  }
+  p {
+    margin-bottom: 35px;
+  }
+  a {
+    color: $bcAzure;
+    @include transition(all .2s);
+    &:hover {
+      color: darken($bcAzure, 25%);
+    }
+  }
+}

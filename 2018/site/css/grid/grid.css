@@ -1,0 +1,323 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+@font-face {
+  font-family: 'museo-slab';
+  src: url("/site/type/museo-slab-500.eot");
+  src: url("/site/type/museo-slab-500.eot?#iefix") format('embedded-opentype'), url("/site/type/museo-slab-500.woff") format('woff'), url("/site/type/museo-slab-500.ttf") format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'museo-slab';
+  src: url("/site/type/museo-slab-700.eot");
+  src: url("/site/type/museo-slab-700.eot?#iefix") format('embedded-opentype'), url("/site/type/museo-slab-700.woff") format('woff'), url("/site/type/museo-slab-700.ttf") format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'proxima-nova';
+  src: url("/site/type/proxima-nova-regular.eot");
+  src: url("/site/type/proxima-nova-regular.eot?#iefix") format('embedded-opentype'), url("/site/type/proxima-nova-regular.woff") format('woff'), url("/site/type/proxima-nova-regular.ttf") format('truetype');
+  font-weight: regular;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'proxima-nova';
+  src: url("/site/type/proxima-nova-italic.eot");
+  src: url("/site/type/proxima-nova-italic.eot?#iefix") format('embedded-opentype'), url("/site/type/proxima-nova-italic.woff") format('woff'), url("/site/type/proxima-nova-italic.ttf") format('truetype');
+  font-weight: regular;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'proxima-nova';
+  src: url("/site/type/proxima-nova-bold.eot");
+  src: url("/site/type/proxima-nova-bold.eot?#iefix") format('embedded-opentype'), url("/site/type/proxima-nova-bold.woff") format('woff'), url("/site/type/proxima-nova-bold.ttf") format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'proxima-nova';
+  src: url("/site/type/proxima-nova-bold-italic.eot");
+  src: url("/site/type/proxima-nova-bold-italic.eot?#iefix") format('embedded-opentype'), url("/site/type/proxima-nova-bold-italic.woff") format('woff'), url("/site/type/proxima-nova-bold-italic.ttf") format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+h2 {
+  font-family: "museo-slab", georgia, serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-top: 1.4em;
+  margin-bottom: 1.4em;
+}
+h5 {
+  font-family: "museo-slab", georgia, serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-top: 0.7em;
+  margin-bottom: 0.7em;
+}
+.schedule-calendar-page.wrap {
+  padding-bottom: 0px;
+}
+.mega-schedule {
+  background: #3c87c8;
+  font-size: 80%;
+  line-height: 1.23em;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+.mega-schedule * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+.mega-schedule .time-slots {
+  margin: 0;
+  padding: 0;
+}
+.mega-schedule .time-slot {
+  border-top: 1px solid #f0f0f0;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.mega-schedule .time-slot:nth-child(odd) {
+  border-top: 1px solid #d3d3d3;
+}
+.mega-schedule .time-slot:before {
+  display: none;
+}
+.mega-schedule .schedule-structure {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  max-width: 100%;
+  z-index: 5;
+}
+.mega-schedule .schedule-structure > section {
+  background: #fff;
+  border-left: 1px solid #a5a5a5;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 500px;
+  min-width: 250px;
+}
+.mega-schedule .schedule-structure > section.time-scale {
+  background: #3c87c8;
+  color: #fff;
+  min-width: 50px;
+  max-width: 60px;
+  text-align: right;
+}
+.mega-schedule .schedule-structure > section.time-scale .time-slots {
+  top: -9px;
+}
+.mega-schedule .schedule-structure > section.time-scale .time-slot {
+  border-top: none;
+  padding-right: 5px;
+}
+.mega-schedule header.schedule-structure section {
+  background: #3c87c8;
+  border: none;
+  color: #fff;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-weight: bold;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-height: 60px;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+}
+.mega-schedule header.schedule-structure section small {
+  display: block;
+}
+.mega-schedule header.schedule-day {
+  background: #3c87c8;
+  color: #fff;
+  padding: 30px 0 30px 70px;
+}
+.mega-schedule header.schedule-day h2 {
+  margin: 0;
+  padding: 0;
+}
+.mega-schedule .event {
+  background: #ccc;
+  border: 2px solid #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 10px;
+  height: 60px;
+  line-height: 1.23em;
+  overflow: hidden;
+  padding: 5px 12px 5px 5px;
+  position: absolute;
+  top: 24%;
+  width: 100%;
+}
+.mega-schedule .event-track {
+  position: absolute;
+  height: 24px;
+  right: -12px;
+  top: -12px;
+  width: 24px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  z-index: 5;
+}
+.mega-schedule .event-track:nth-child(3) {
+  right: -3px;
+  z-index: 2;
+}
+.convention-hours > div {
+  margin-bottom: 30px;
+}
+.convention-hours h3 {
+  color: #3c87c8;
+  font-size: 24px;
+  margin-top: 0;
+}
+.convention-hours ul {
+  margin: 0;
+  padding: 0;
+}
+.convention-hours li:before {
+  display: none;
+}
+.convention-hours .day-block {
+  font-weight: bold;
+  display: inline-block;
+  width: 200px;
+}
+body {
+  color: #222;
+  font-family: "proxima-nova", "helvetica neue", helveticaneue, helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.4em;
+}
+p {
+  margin-bottom: 20px;
+}
+

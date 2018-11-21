@@ -1,0 +1,198 @@
+.vendor-hall-map-wrap {
+  background-image: url('http://bd4579002468ef404afa-8099c7257fe87d50d338ebe5e9167369.r97.cf2.rackcdn.com/2015-marketplace.jpg');
+  #vendor-hall-map {
+    display: none;
+  }
+}
+
+.map-vendor-booth-shape {
+  fill: rgb(255,255,255);
+  @include transition(all .2s);
+  &.active {
+    fill: rgba(255,255,255,.6);
+  }
+  &.selected {
+    fill: $bcPurple;
+  }
+}
+
+.map-vendor-booth {
+  cursor: pointer;
+}
+
+
+.qtip.qtip-vendor {
+  max-width: 250px;
+  min-width: 250px;
+}
+
+.vendors-at-booth {
+  li {
+    border-bottom: 1px dotted $bcGrey;
+    margin-bottom: 7px;
+    padding-bottom: 7px;
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    header {
+      font-weight: bold;
+    }
+    span {
+      display: block;
+      margin-top: 3px;
+    }
+    a {
+      color: $bcPurple;
+      @include transition(all .2s);
+      &:hover {
+        color: lighten($bcPurple, 20%);
+      }
+    }
+  }
+}
+
+
+
+.vendor-card {
+  display: inline-block;
+  margin: 10px;
+  width: 380px;
+  vertical-align: top;
+  header {
+    background: $bcPurple;
+    color: white;
+    padding: 5px;
+    small {
+      display: block;
+    }
+  }
+  h6 {
+    margin: 0;
+  }
+  .details {
+    border: 1px solid $lightGrey;
+    padding: 5px;
+    font-size: 14px;
+    @include box-sizing('border-box');
+  }
+  p {
+    margin: 0 0 10px 0;
+    line-height: 1.2em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &.marketplace-info {
+    background: $superLightGrey;
+    h6 {
+      color: $bcPurple;
+      margin-bottom: 10px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-top: 0;
+      &:before {
+        content: none;
+      }
+    }
+    span.day {
+      display: inline-block;
+      min-width: 120px;
+    }
+  }
+}
+
+
+
+
+// 2016 exhibitor stuff
+
+.merchant-types {
+  display: block;
+
+  background: $bcPurple;
+  color: white;
+  margin-top: 30px;
+
+  .merchant-specs {
+    max-width: 375px;
+    display: inline-block;
+  }
+
+  section {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -o-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 40px 20px;
+    text-align: center;
+
+    &:nth-child(even) {
+      background: lighten($bcPurple, 10%);
+    }
+
+    a.policy-link {
+      display: block;
+      font-size: 70%;
+      color: white;
+      padding: 10px 0;
+      transition: color .2s;
+      &:hover {
+        color: #FFEB5F;
+      }
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    p {
+      a {
+        color: white;
+        display: inline-block;
+        border-bottom: 1px dotted white;
+      }
+    }
+
+    header {
+      margin-bottom: 25px;
+      min-height: 135px;
+    }
+  }
+}
+
+.badge-type-list .perks li {
+  text-align: left; 
+}
+
+@media only screen and (min-width: 960px) { 
+  .merchant-types {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -o-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    -o-box-align: stretch;
+    -ms-flex-align: stretch;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+  }
+}

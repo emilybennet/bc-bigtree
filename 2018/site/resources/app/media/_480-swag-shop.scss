@@ -1,0 +1,47 @@
+.shop-cart {
+  .table {
+    header {
+      display: block;
+    }
+
+    footer {
+      .totals {
+        width: 40%;
+        float: right;
+      }
+      .cart-disclaimer {
+        float: left;
+        width: 55%;
+        @include box-sizing('border-box');
+      }
+    }
+    .item-list {
+      section {
+        float: left;
+        height: 95px;
+        width: 20%;
+        &.image {
+          display: block;
+          width: 15%;
+        }
+        &.description {
+          width: 50%;
+        }
+        &.qty {
+          width: 15%;
+          text-align: center;
+          .qty-label {
+            display: none;
+          }
+        }
+        &.price {
+          text-align: right;
+        }
+        .liner {
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}

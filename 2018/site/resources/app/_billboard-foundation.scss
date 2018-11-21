@@ -1,0 +1,212 @@
+//
+// Billboard foundations
+// --------------------------------------------------
+
+
+.billboard {
+  position: relative;
+  width: 100%;
+  height: 720px;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  background-color: $lightGrey;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -ms-perspective: 1000px;
+  -o-perspective: 1000px;
+  perspective: 1000px;
+  height: 470px;
+
+  .reveal .slides>section,
+  .reveal .slides>section>section {
+    height: 100%;
+    padding: 0px;
+  }
+
+  .slide-liner {
+    margin: 0 auto;
+    max-width: 960px;
+    padding-top: 95px;
+    height: 100%;
+    color: white;
+    @include box-sizing('border-box');
+  }
+
+  .slide-content {
+    position: absolute;
+    bottom: 0px;
+    padding: 10px;
+    width: 100%;
+    background: black;
+    background: rgba(0,0,0,.6);
+    color: white;
+    text-align: left;
+    @include box-sizing("border-box");
+
+    h1 {
+      margin-top: 0px;
+      margin-bottom: 10px;
+      // font-size: 50px;
+      font-size: 25px;
+    }
+  }
+
+  img.foreground {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 150%;
+  }
+
+
+  // Slide background-image
+  // -------------------------
+  
+  .reveal .slide-background {
+    background-position: 50% 100%;
+    @include background-size('150% auto');
+    // @include background-size('1440px auto');
+  }
+
+  @media screen and (orientation:portrait) {
+    .reveal .slide-background {
+      background-position: 50% 100%;
+      @include background-size('300% auto');
+    }  
+  }
+
+
+  // Reveal Progress Bar
+  // -------------------------
+  
+  .progress {
+    position: absolute;
+    height: 3px;
+    span {
+      background-color: white;
+      height: 3px;
+      @include transition(all .5s);
+    }
+  }
+
+
+  // Reveal Pagination
+  // -------------------------
+
+  .paginate {
+    color: white;
+    position: absolute;
+    top: 45%;
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    cursor: pointer;
+    opacity: 0.7;
+    z-index: 10;
+    @include transition(all .5s);
+    span {
+      @include transition(all .5s);
+    }
+    &:hover {
+      opacity: .95;
+    }
+    &:active span {
+      top: 1px;
+    }
+    &.disabled {
+      opacity: 0;
+    }
+    &.left {
+      left: 0px;
+    }
+    &.right {
+      right: 0px;
+    }
+  }
+
+
+  // slide content
+  // -------------------------
+  
+  // .slide-content-liner {
+  //   max-width: 960px;
+  //   margin: 0 auto;
+  //   padding: 100px 0 10px;
+  //   height: 100%;
+  //   @include box-sizing('border-box');
+  // }
+
+  // .slide-content {
+
+  //   h1 {
+  //     margin-top: 0;
+  //     margin-bottom: ($line-height-base/4);
+  //     font-size: ceil($font-size-h1 / 2); 
+  //   }
+
+  // }
+
+
+
+  // billboard map
+  // -------------------------
+  
+  .leaflet-control-container {
+    position: static;
+  }
+
+  .leaflet-popup-content {
+    color: $black;
+  }
+
+
+
+  // content-over-billboard (About photo viewer)
+  // -------------------------------------------
+  
+  .content.over-billboard {
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+    padding: 10px 0 30px;
+    width: 100%;
+    background: black;
+    background: rgba(0,0,0,.6);
+    .page-header h2 {
+      margin-top: 0;
+      margin-bottom: 0.2em;
+    }
+    article {
+      float: right;
+      text-align: left;
+      width: 700px;
+    }
+    .section-nav {
+      float: left;
+      padding-top: 10px;
+      li {
+        width: 200px;
+        font-family: $proximaCon;
+        a {
+          display: block;
+          padding: 5px 5px 3px 5px;
+          color: $white;
+          color: rgba($white,.3);
+          border-bottom: 1px solid rgba($white,.1);
+          @include transition(all .2s);
+        }
+        &:hover a{
+          color: rgba($white,.9);
+        }
+        &:last-child a {
+          border-bottom: none;
+        }
+        &.active {
+          display: none;
+        }
+      }
+    }
+  }
+
+}

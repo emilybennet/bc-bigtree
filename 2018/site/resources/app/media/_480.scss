@@ -1,0 +1,97 @@
+/*-------------------------------------------
+  Header .primary
+-------------------------------------------*/
+
+header.primary {
+  .brand {
+    width: 250px;
+    height: 73px;
+    @include background-size('250px 73px');
+    &.sticker {
+      width: 250px;
+      height: 77px;
+      @include background-size('250px 72px');
+    }
+  }
+
+  .nav-slider-control {
+    span.short {
+      display: inline-block;
+    }
+  }
+
+}
+
+
+
+/*-------------------------------------------
+  Footer (footer.primary)
+-------------------------------------------*/
+
+footer.primary {
+  nav.site {
+    width: 400px;
+  }
+
+  .lawyer-speak {
+    width: 400px;
+  }
+}
+
+/*-------------------------------------------
+  Hotel list
+-------------------------------------------*/
+
+li.hotel {
+  .details {
+    .features li {
+      padding-right: 10px;
+      width: 45%;
+      display: inline-block;
+    }
+  }
+}
+
+/*-------------------------------------------
+  Guests
+-------------------------------------------*/
+
+.guest-filmstrips {
+
+  .filmstrip {
+    float: left;
+    width: 49%;
+  }
+}
+
+section.guests.single-guest {
+  .image-group {
+    display: block;
+  }
+  .guest-bio {
+    padding-left: 200px;
+  }
+}
+.guest-strips {
+  .strip {
+    .pane.anon {
+      display: block;
+    }
+  }
+}
+
+
+/*-------------------------------------------
+  Home
+-------------------------------------------*/
+
+.header-band.home {
+  h3 {
+    span {
+      display: inline;
+      &:first-child:after {
+        content: ' • ';
+      }
+    }
+  }
+}

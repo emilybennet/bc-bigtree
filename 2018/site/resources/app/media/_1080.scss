@@ -1,0 +1,12 @@
+/*-------------------------------------------
+  Home
+-------------------------------------------*/
+
+.announcement-strip {
+  &.image-title {
+    .announcement-copy img.title {
+      margin-left: -8%;
+      max-width: 120%;
+    }
+  }
+}
